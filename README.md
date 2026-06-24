@@ -1,2 +1,2 @@
 # lumiere
-carfsndle shop
+candle shop
