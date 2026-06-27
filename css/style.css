@@ -1,0 +1,253 @@
+
+:root {
+    --color-bg-primary: #F5EFD6;
+    --color-text-main: #535C39;
+    --color-accent-med: #7E8C54;
+    --color-accent-dark: #013220;
+    --color-accent-hover: #357A39;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-main);
+    overflow-x: hidden;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+
+.lumiere-topbar {
+    background-color: var(--color-accent-med);
+    color: var(--color-bg-primary);
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.lumiere-topbar__links {
+    display: flex;
+    gap: 20px;
+}
+
+.lumiere-topbar__link:hover {
+    color: var(--color-accent-dark);
+}
+
+.lumiere-topbar__logo-text {
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+
+.lumiere-header {
+    background-color: var(--color-bg-primary);
+    padding: 20px 5% 10px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+.lumiere-header__main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lumiere-header__spacer {
+    flex: 1;
+}
+
+.lumiere-header__logo-container {
+    flex: 1;
+    text-align: center;
+}
+
+.lumiere-header__logo {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    letter-spacing: 6px;
+    text-transform: lowercase;
+}
+
+.lumiere-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.lumiere-search__input {
+    padding: 6px 12px;
+    border: 1px solid var(--color-text-main);
+    background-color: transparent;
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-accent-dark);
+    outline: none;
+    width: 160px;
+    transition: width 0.3s ease;
+}
+
+.lumiere-search__input:focus {
+    width: 190px;
+    border-color: var(--color-accent-dark);
+}
+
+.lumiere-actions__icons {
+    display: flex;
+    gap: 15px;
+}
+
+.lumiere-actions__icon {
+    font-size: 18px;
+    color: var(--color-accent-dark);
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.lumiere-actions__icon:hover {
+    transform: scale(1.1);
+    color: var(--color-accent-hover);
+}
+
+
+   
+.lumiere-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 45px; 
+    padding-bottom: 10px;
+}
+
+.lumiere-navbar__link {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: var(--color-text-main);
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.lumiere-navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent-dark);
+    transition: width 0.3s ease;
+}
+
+.lumiere-navbar__link:hover {
+    color: var(--color-accent-dark);
+}
+
+.lumiere-navbar__link:hover::after {
+    width: 100%;
+}
+
+
+.lumiere-hero {
+    margin: 0 5%;
+}
+
+.lumiere-hero__container {
+    background-color: #E2DBC2;
+    background-image: url('https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5%;
+}
+
+.lumiere-moto-box {
+    background-color: rgba(245, 239, 214, 0.95);
+    padding: 40px;
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid var(--color-text-main);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.lumiere-moto-box__title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--color-accent-dark);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.lumiere-moto-box__button {
+    background-color: var(--color-accent-dark);
+    color: var(--color-bg-primary);
+    padding: 12px 30px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.lumiere-moto-box__button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+
+@media (max-width: 768px) {
+    .lumiere-header__main-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .lumiere-header__spacer {
+        display: none;
+    }
+    .lumiere-header__actions {
+        justify-content: center;
+        width: 100%;
+    }
+    .lumiere-navbar {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .lumiere-hero__container {
+        justify-content: center;
+        height: auto;
+        padding: 40px 20px;
+    }
+    .lumiere-moto-box {
+        max-width: 100%;
+    }
+    .lumiere-moto-box__button {
+        align-self: center;
+    }
+}
