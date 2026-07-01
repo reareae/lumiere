@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — Lumière</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="shop.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    Dërgim falas për porosi mbi 3 000 L &nbsp;·&nbsp; 100% Dyllë Natyral &nbsp;·&nbsp; I punuar me dorë
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="index.html">Koleksionet</a>
+      <a href="shop.html" class="active">Ide Dhuratash</a>
+      <a href="index.html">Bota Jonë</a>
+      <a href="index.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <a href="index.html" class="logo">LUMIÈRE</a>
+    <div class="nav-right">
+      <input class="nav-search" placeholder="Kërko..."/>
+      <div class="nav-icons">
+        <i class="ti ti-user"></i>
+        <span class="cart-wrap">
+          <i class="ti ti-shopping-bag"></i>
+          <span id="cart-badge"></span>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="shop-hero">
+    <div class="shop-hero-content">
+      <p class="eyebrow" style="color:rgba(245,239,214,0.55)">Koleksioni i plotë</p>
+      <h1 class="shop-hero-h">Të gjithë qirinjtë <em>Lumière</em></h1>
+      <p class="shop-hero-sub">Zbulo koleksionin tonë të plotë — aromatikë, dekorativë, ekologjikë dhe festive.</p>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Kryefaqja</a>
+    <i class="ti ti-chevron-right"></i>
+    <span>Shop</span>
+  </div>
+
+  <!-- SHOP BODY -->
+  <div class="shop-body">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="sidebar">
+
+      <div class="sidebar-block">
+        <p class="sidebar-title">Kategoritë</p>
+        <div class="filter-list">
+          <label class="filter-item active-filter">
+            <input type="radio" name="cat" value="all" checked/> Të gjitha
+            <span class="filter-count">24</span>
+          </label>
+          <label class="filter-item">
+            <input type="radio" name="cat" value="aromatike"/> Aromatikë
+            <span class="filter-count">8</span>
+          </label>
+          <label class="filter-item">
+            <input type="radio" name="cat" value="dekorative"/> Dekorativë
+            <span class="filter-count">6</span>
+          </label>
+          <label class="filter-item">
+            <input type="radio" name="cat" value="ekologjike"/> Ekologjikë
+            <span class="filter-count">4</span>
+          </label>
+          <label class="filter-item">
+            <input type="radio" name="cat" value="festive"/> Festive
+            <span class="filter-count">3</span>
+          </label>
+          <label class="filter-item">
+            <input type="radio" name="cat" value="romantike"/> Romantikë
+            <span class="filter-count">3</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <p class="sidebar-title">Çmimi</p>
+        <div class="price-range">
+          <div class="price-inputs">
+            <div class="price-input-wrap">
+              <span>Min</span>
+              <input type="number" id="priceMin" value="0" min="0" max="5000"/>
+            </div>
+            <div class="price-sep">—</div>
+            <div class="price-input-wrap">
+              <span>Max</span>
+              <input type="number" id="priceMax" value="5000" min="0" max="5000"/>
+            </div>
+          </div>
+          <input type="range" id="priceSlider" min="0" max="5000" value="5000" class="price-slider"/>
+          <div class="price-labels">
+            <span>0 L</span><span>5 000 L</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <p class="sidebar-title">Aroma</p>
+        <div class="filter-list">
+          <label class="filter-check"><input type="checkbox" value="lavande"/> Lavandë</label>
+          <label class="filter-check"><input type="checkbox" value="vanilje"/> Vanilje</label>
+          <label class="filter-check"><input type="checkbox" value="trendarfile"/> Trëndafile</label>
+          <label class="filter-check"><input type="checkbox" value="sandalwood"/> Sandalwood</label>
+          <label class="filter-check"><input type="checkbox" value="amber"/> Amber & Oud</label>
+          <label class="filter-check"><input type="checkbox" value="pishe"/> Pishe & Dëllinjë</label>
+          <label class="filter-check"><input type="checkbox" value="agrume"/> Agrume & Portokall</label>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <p class="sidebar-title">Koha e djegies</p>
+        <div class="filter-list">
+          <label class="filter-check"><input type="checkbox" value="short"/> Deri 30 orë</label>
+          <label class="filter-check"><input type="checkbox" value="mid"/> 30 – 50 orë</label>
+          <label class="filter-check"><input type="checkbox" value="long"/> Mbi 50 orë</label>
+        </div>
+      </div>
+
+      <button class="clear-filters-btn" id="clearFilters">
+        <i class="ti ti-x"></i> Pastro filtrat
+      </button>
+
+    </aside>
+
+    <!-- MAIN PRODUCTS -->
+    <main class="shop-main">
+
+      <!-- TOOLBAR -->
+      <div class="shop-toolbar">
+        <p class="results-count"><span id="countNum">24</span> produkte</p>
+        <div class="toolbar-right">
+          <div class="view-toggle">
+            <button class="view-btn active" id="gridView" title="Grid"><i class="ti ti-layout-grid"></i></button>
+            <button class="view-btn" id="listView" title="List"><i class="ti ti-layout-list"></i></button>
+          </div>
+          <select class="sort-select" id="sortSelect">
+            <option value="default">Rendit: Default</option>
+            <option value="price-asc">Çmimi: Më i ulët</option>
+            <option value="price-desc">Çmimi: Më i lartë</option>
+            <option value="name-asc">Emri: A–Z</option>
+            <option value="name-desc">Emri: Z–A</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ACTIVE FILTER TAGS -->
+      <div class="active-tags" id="activeTags"></div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="products-grid" id="productsGrid">
+
+        <!-- PRODUCT CARDS — foto vendosen te img src="" -->
+        <div class="shop-card" data-cat="aromatike" data-price="1200" data-name="Provence">
+          <div class="shop-card-img">
+            <img src="" alt="Provence" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+            <span class="shop-badge">Bestseller</span>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Aromatike · Lavandë</p>
+            <p class="shop-card-name">Provence</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 45 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 200 L</span>
+              <button class="add-btn" data-name="Provence">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="dekorative" data-price="1550" data-name="Verde Pillar">
+          <div class="shop-card-img">
+            <img src="" alt="Verde Pillar" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Dekorative · Ambient</p>
+            <p class="shop-card-name">Verde Pillar</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 550 L</span>
+              <button class="add-btn" data-name="Verde Pillar">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="ekologjike" data-price="850" data-name="Lumière Classic">
+          <div class="shop-card-img">
+            <img src="" alt="Lumière Classic" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+            <span class="shop-badge new">I ri</span>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Ekologjike · Vanilje</p>
+            <p class="shop-card-name">Lumière Classic</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">850 L</span>
+              <button class="add-btn" data-name="Lumière Classic">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="festive" data-price="2800" data-name="Set Krishtlindjesh">
+          <div class="shop-card-img">
+            <img src="" alt="Set Krishtlindjesh" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Festive · Set</p>
+            <p class="shop-card-name">Set Krishtlindjesh</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-gift"></i> Kutia dhuratë</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">2 800 L</span>
+              <button class="add-btn" data-name="Set Krishtlindjesh">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="romantike" data-price="1100" data-name="Rosa Serata">
+          <div class="shop-card-img">
+            <img src="" alt="Rosa Serata" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Romantike · Trëndafile</p>
+            <p class="shop-card-name">Rosa Serata</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 40 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 100 L</span>
+              <button class="add-btn" data-name="Rosa Serata">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="aromatike" data-price="1350" data-name="Amber Nuit">
+          <div class="shop-card-img">
+            <img src="" alt="Amber Nuit" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Premium · Amber & Oud</p>
+            <p class="shop-card-name">Amber Nuit</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 350 L</span>
+              <button class="add-btn" data-name="Amber Nuit">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="aromatike" data-price="980" data-name="Citrus Garden">
+          <div class="shop-card-img">
+            <img src="" alt="Citrus Garden" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Aromatike · Agrume</p>
+            <p class="shop-card-name">Citrus Garden</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 38 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">980 L</span>
+              <button class="add-btn" data-name="Citrus Garden">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="ekologjike" data-price="1650" data-name="Forest Pine">
+          <div class="shop-card-img">
+            <img src="" alt="Forest Pine" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Ekologjike · Pishe</p>
+            <p class="shop-card-name">Forest Pine</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 65 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 650 L</span>
+              <button class="add-btn" data-name="Forest Pine">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="dekorative" data-price="720" data-name="Mini Votive Set">
+          <div class="shop-card-img">
+            <img src="" alt="Mini Votive Set" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+            <span class="shop-badge sale">–20%</span>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Dekorative · Set 3 copë</p>
+            <p class="shop-card-name">Mini Votive Set</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 20 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+            <div class="shop-card-foot">
+              <div>
+                <span class="shop-card-price">720 L</span>
+                <span class="old-price">900 L</span>
+              </div>
+              <button class="add-btn" data-name="Mini Votive Set">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="romantike" data-price="1800" data-name="Velvet Rose">
+          <div class="shop-card-img">
+            <img src="" alt="Velvet Rose" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Romantike · Premium</p>
+            <p class="shop-card-name">Velvet Rose</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 800 L</span>
+              <button class="add-btn" data-name="Velvet Rose">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="festive" data-price="3200" data-name="Set Ditëlindjesh">
+          <div class="shop-card-img">
+            <img src="" alt="Set Ditëlindjesh" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Festive · Dhuratë</p>
+            <p class="shop-card-name">Set Ditëlindjesh</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-gift"></i> Kutia dhuratë</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">3 200 L</span>
+              <button class="add-btn" data-name="Set Ditëlindjesh">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-card" data-cat="dekorative" data-price="1100" data-name="Ivory Column">
+          <div class="shop-card-img">
+            <img src="" alt="Ivory Column" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">+ Shto shpejt</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">Dekorative · Kolonë</p>
+            <p class="shop-card-name">Ivory Column</p>
+            <p class="shop-card-detail"><i class="ti ti-clock"></i> 48 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 100 L</span>
+              <button class="add-btn" data-name="Ivory Column">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- END GRID -->
+
+      <!-- NO RESULTS -->
+      <div class="no-results" id="noResults" style="display:none;">
+        <i class="ti ti-mood-sad"></i>
+        <p>Asnjë produkt nuk u gjet me këto filtra.</p>
+        <button class="btn btn-dark" onclick="document.getElementById('clearFilters').click()">Pastro filtrat</button>
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination" id="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn page-next"><i class="ti ti-chevron-right"></i></button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LUMIÈRE</div>
+        <p class="footer-tag">"Ndriço çdo moment,<br>frymëzo çdo ndjesi."</p>
+        <div class="footer-socials">
+          <a href="#"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="fcol-title">Koleksionet</p>
+        <a href="shop.html" class="flink">Të gjitha produktet</a>
+        <a href="shop.html" class="flink">Qirinj Aromatikë</a>
+        <a href="shop.html" class="flink">Qirinj Dekorativë</a>
+        <a href="shop.html" class="flink">Ekologjikë</a>
+      </div>
+      <div>
+        <p class="fcol-title">Kompania</p>
+        <a href="index.html" class="flink">Rreth nesh</a>
+        <a href="index.html" class="flink">Blog</a>
+        <a href="contact.html" class="flink">Kontakt</a>
+      </div>
+      <div>
+        <p class="fcol-title">Ndihma</p>
+        <a href="#" class="flink">Kthimet</a>
+        <a href="#" class="flink">Dërgesa</a>
+        <a href="#" class="flink">FAQ</a>
+        <a href="#" class="flink">Privatësia</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
+      <p class="fcopy">Dizajnuar me ♥ në Tiranë</p>
+    </div>
+  </footer>
+
+  <div class="cart-toast" id="cartToast">
+    <i class="ti ti-check"></i>
+    <span id="toastMsg">Produkti u shtua në shportë!</span>
+  </div>
+
+  <script src="shop.js"></script>
+</body>
+</html>

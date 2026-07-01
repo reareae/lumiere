@@ -1,65 +1,376 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumière - Qirinj Artizanalë</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lumière — Qirinj Artizanalë & Aromatikë</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <div class="lumiere-topbar">
-        <div class="lumiere-topbar__links">
-            <a href="#" class="lumiere-topbar__link">Contact</a>
-            <a href="#" class="lumiere-topbar__link">About</a>
-        </div>
-        <div class="lumiere-topbar__branding">
-            <span class="lumiere-topbar__logo-text">LOGO</span>
-        </div>
+
+  <div class="topbar">
+    Dërgim falas për porosi mbi 3 000 L &nbsp;·&nbsp; 100% Dyllë Natyral &nbsp;·&nbsp; I punuar me dorë
+  </div>
+
+  <
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="#">Koleksionet</a>
+      <a href="#">Ide Dhuratash</a>
+      <a href="#">Bota Jonë</a>
+      <a href="#">Blog</a>
     </div>
+    <div class="logo">LUMIÈRE</div>
+    <div class="nav-right">
+      <input class="nav-search" placeholder="Kërko..."/>
+      <div class="nav-icons">
+        <i class="ti ti-user"></i>
+        <i class="ti ti-shopping-bag"></i>
+      </div>
+    </div>
+  </nav>
 
-    <header class="lumiere-header">
-        <div class="lumiere-header__main-row">
-            <div class="lumiere-header__spacer"></div>
-            
-            <div class="lumiere-header__logo-container">
-                <h1 class="lumiere-header__logo">lumiere</h1>
-            </div>
-            
-            <div class="lumiere-header__actions">
-                <div class="lumiere-search">
-                    <input type="text" class="lumiere-search__input" placeholder="Kërko...">
-                </div>
-                <div class="lumiere-actions__icons">
-                    <i class="fa-solid fa-basket-shopping lumiere-actions__icon" title="Shporta"></i>
-                    <i class="fa-regular fa-user lumiere-actions__icon" title="Profili"></i>
-                </div>
-            </div>
-        </div>
+
+  <section class="hero">
+    <div class="hero-img-wrap">
+      <img
+        class="hero-photo"
+        src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=1200&q=80"
+        alt="Qirinj Lumière"/>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Artizanë me passion </p>
+        <h1 class="hero-h1">Ndriço çdo moment,<br><em>frymëzo</em> çdo ndjesi.</h1>
+        <div class="hero-divider"></div>
+        <p class="hero-sub">Qirinj të punuar me dorë, nga materiale natyrale — për hapësira që ndjehen të gjalla.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-light">Zbulo koleksionet</a>
         
-        <nav class="lumiere-navbar">
-            <a href="#" class="lumiere-navbar__link">Blogu</a>
-            <a href="#" class="lumiere-navbar__link">Koleksionet</a>
-            <a href="#" class="lumiere-navbar__link">Gift</a>
-            <a href="#" class="lumiere-navbar__link">Dyqanet</a>
-        </nav>
-    </header>
-
-    <section class="lumiere-hero">
-        <div class="lumiere-hero__container">
-            <div class="lumiere-moto-box">
-                <p class="lumiere-moto-box__title">"Ndriço çdo moment, frymëzo çdo ndjesi."</p>
-                <button class="lumiere-moto-box__button">Button</button>
-            </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="strip-item"><i class="ti ti-leaf"></i><span>100% Natyral</span></div>
+    <div class="strip-item"><i class="ti ti-hand-heart"></i><span>I punuar me dorë</span></div>
+    <div class="strip-item"><i class="ti ti-truck-delivery"></i><span>Dërgim falas mbi 3000L</span></div>
+    <div class="strip-item"><i class="ti ti-shield-check"></i><span>Garanci cilësie</span></div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section" id="categories">
+    <div class="section-header">
+      <p class="eyebrow">Koleksionet tona</p>
+      <h2 class="stitle">Gjej qirinë e duhur</h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" style="background-image:url('images/il_600x600.7916909176_szc5.webp')">
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <p class="cat-name">Aromatikë</p>
+          <p class="cat-sub">Lavandë, vanilje, </p>
+        </div>
+      </div>
+      <div class="cat-card" style="background-image:url('images/nq5at3j4jmut82d318stm12tbroxmkon.jpg')">
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <p class="cat-name">Dekorativë</p>
+          <p class="cat-sub">Për shtëpi dhe evente</p>
+        </div>
+      </div>
+      <div class="cat-card" style="background-image:url('images/eco\ friendlycandle.png')">
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <p class="cat-name">Ekologjikë</p>
+          <p class="cat-sub">Dyllë 100% natyral</p>
+        </div>
+      </div>
+      <div class="cat-card" style="background-image:url('images/il_1588xN.7363321683_sq8t.webp')">
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <p class="cat-name">Festive</p>
+          <p class="cat-sub">Krishtlindje, Ditëlindje</p>
+        </div>
+      </div>
+      <div class="cat-card" style="background-image:url('images/il_1588xN.4921670736_77xk.webp')">
+        <div class="cat-overlay"></div>
+        <div class="cat-body">
+          <p class="cat-name">Romantikë</p>
+          <p class="cat-sub">Mbrëmje të veçanta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section bg-cream" id="products">
+    <div class="section-header">
+      <p class="eyebrow">Të preferuarat</p>
+      <h2 class="stitle">Produkte të zgjedhura</h2>
+    </div>
+    <div class="prod-grid">
+
+      <div class="card" data-name="Provence" data-price="1200">
+        <div class="card-img-wrap">
+          <img src="images/il_1588xN.7666017445_c4ol.avif" alt="Provence"/>
+          <div class="card-overlay"><span class="card-cta">Shiko produktin</span></div>
+          <span class="card-badge">Bestseller</span>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Aromatike · Lavandë</p>
+          <p class="card-name">Provence</p>
+          <p class="card-sub">Aromë fushash franceze · 45 orë djegie</p>
+          <div class="card-foot">
+            <span class="card-price">1 200 L</span>
+            <button class="add-btn">+ Shto në shportë</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-name="Verde Pillar" data-price="1550">
+        <div class="card-img-wrap">
+          <img src="images/soy candles.webp" alt="Verde Pillar"/>
+          <div class="card-overlay"><span class="card-cta">Shiko produktin</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Dekorative · Ambient</p>
+          <p class="card-name">Verde Pillar</p>
+          <p class="card-sub">Dyllë soje natyral · 60 orë djegie</p>
+          <div class="card-foot">
+            <span class="card-price">1 550 L</span>
+            <button class="add-btn">+ Shto në shportë</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-name="Lumière Classic" data-price="850">
+        <div class="card-img-wrap">
+          <img src="images/il_1588xN.3162499558_i4yy.webp" alt="Lumière Classic"/>
+          <div class="card-overlay"><span class="card-cta">Shiko produktin</span></div>
+          <span class="card-badge new">I ri</span>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Ekologjike · Vanilje</p>
+          <p class="card-name">Lumière Classic</p>
+          <p class="card-sub">Sandalwood + vanilje · 55 orë djegie</p>
+          <div class="card-foot">
+            <span class="card-price">850 L</span>
+            <button class="add-btn">+ Shto në shportë</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-name="Set Krishtlindjesh" data-price="2800">
+        <div class="card-img-wrap">
+          <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Set Krishtlindjesh"/>
+          <div class="card-overlay"><span class="card-cta">Shiko produktin</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Koleksion · Festive</p>
+          <p class="card-name">Set Krishtlindjesh</p>
+          <p class="card-sub">2 qirinj artizanë + kutia dhuratë</p>
+          <div class="card-foot">
+            <span class="card-price">2 800 L</span>
+            <button class="add-btn">+ Shto në shportë</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-name="Rosa Serata" data-price="1100">
+        <div class="card-img-wrap">
+          <img src="images/rosaserata.jpg" alt="Rosa Serata"/>
+          <div class="card-overlay"><span class="card-cta">Shiko produktin</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Romantike · Rozë</p>
+          <p class="card-name">Rosa Serata</p>
+          <p class="card-sub">Trëndafile & musk · 40 orë djegie</p>
+          <div class="card-foot">
+            <span class="card-price">1 100 L</span>
+            <button class="add-btn">+ Shto në shportë</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-name="Amber Nuit" data-price="1350">
+        <div class="card-img-wrap">
+          <img src="images/20260110-AmberNoirCandle.webp" alt="Amber Nuit"/>
+          <div class="card-overlay"><span class="card-cta">Shiko produktin</span></div>
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Premium · Amber</p>
+          <p class="card-name">Amber Nuit</p>
+          <p class="card-sub">Amber & oud · 50 orë djegie</p>
+          <div class="card-foot">
+            <span class="card-price">1 350 L</span>
+            <button class="add-btn">+ Shto në shportë</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="center-btn">
+      <a href="shop.html" class="btn btn-dark">Shiko të gjitha produktet</a>
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner-img-wrap">
+      <img src="images/il_1588xN.7600711643_nsq7.webp" alt="Koleksioni dimëror"/>
+      <div class="banner-overlay"></div>
+    </div>
+    <div class="banner-content">
+      <p class="eyebrow" style="color:rgba(245,239,214,0.6)">Koleksioni ri · Dimër 2026</p>
+      <h2 class="banner-h">Sezoni i Aromave<br>Dimërore</h2>
+      <p class="banner-p">Pishe, kanellë, mirë dhe sandalwood — qirinj të krijuar për netët e gjata të dimrit.</p>
+      <a href="#" class="btn btn-light">Zbulo koleksionin</a>
+    </div>
+  </section>
+
+  <!-- HOW IT'S MADE -->
+  <section class="section" id="about">
+    <div class="how-grid">
+      <div class="how-img-wrap">
+        <img src="images/il_1588xN.3162497320_1ijg.avif" alt="Si krijohet"/>
+      </div>
+      <div class="how-text">
+        <p class="eyebrow">Procesi ynë</p>
+        <h2 class="stitle" style="margin-bottom:16px">Si krijohet çdo<br>qiri Lumière</h2>
+        <p class="how-p">Nga zgjedhja e dyllës natyrale deri te derdhja me dorë dhe etiketimi artizanal — çdo hap bëhet me kujdes dhe dashuri për detajet. Përdorim vetëm aroma bimore dhe përbërës të certifikuar natyralë.</p>
+        <ul class="how-list">
+          <li><i class="ti ti-check"></i> Dyllë soje 100% natyral</li>
+          <li><i class="ti ti-check"></i> Aroma bimore të certifikuara</li>
+          <li><i class="ti ti-check"></i> Fitil pambuku organik</li>
+          <li><i class="ti ti-check"></i> Ambalazh i riciklueshëm</li>
+        </ul>
+        <a href="#" class="btn btn-dark" style="margin-top:28px">Mëso më shumë</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="section-header">
+      <p class="eyebrow" style="color:rgba(245,239,214,0.5)">Identiteti ynë</p>
+      <h2 class="stitle" style="color:#F5EFD6">Vlerat e <em style="font-style:italic;color:#7E8C54">Lumière</em></h2>
+    </div>
+    <div class="val-grid">
+      <div class="val-item reveal">
+        <div class="val-icon"><i class="ti ti-award"></i></div>
+        <p class="val-name">Artizanat</p>
+        <p class="val-text">Çdo qiri i punuar me dorë, me standarde të larta dhe dizajn unik.</p>
+      </div>
+      <div class="val-item reveal">
+        <div class="val-icon"><i class="ti ti-leaf"></i></div>
+        <p class="val-name">Natyralitet</p>
+        <p class="val-text">Dyllë bimor, aroma eterike dhe materiale të riciklueshme.</p>
+      </div>
+      <div class="val-item reveal">
+        <div class="val-icon"><i class="ti ti-file-check"></i></div>
+        <p class="val-name">Transparencë</p>
+        <p class="val-text">Çdo produkt me listë të plotë përbërësish dhe kohën e djegies.</p>
+      </div>
+      <div class="val-item reveal">
+        <div class="val-icon"><i class="ti ti-truck-delivery"></i></div>
+        <p class="val-name">Shpejtësi</p>
+        <p class="val-text">Blerje e thjeshtë, pagesa të sigurta dhe dërgim i shpejtë.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials">
+    <div class="section-header">
+      <p class="eyebrow">Çfarë thonë klientët</p>
+      <h2 class="stitle">Eksperienca e tyre</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Qirinjtë Lumière janë thjesht të mahnitshëm. Aroma mbush të gjithë dhomën dhe zgjat orë të tëra."</p>
+        <p class="testi-author">— Arta M., Tiranë</p>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"I bleva si dhuratë për mikeshën time dhe ishte hiti i festës. Paketimi është elegant dhe qiriu është gjeniu."</p>
+        <p class="testi-author">— Blerina K., Durrës</p>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Cilësia e produkteve Lumière është e jashtëzakonshme. Tashmë jam klient i rregullt dhe nuk do të ndërroj."</p>
+        <p class="testi-author">— Gentian P., Shkodër</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <p class="eyebrow" style="color:rgba(245,239,214,0.55)">Qëndro i lidhur</p>
+      <h2 class="newsletter-h">Regjistrohu për oferta ekskluzive</h2>
+      <p class="newsletter-sub">Merr 10% zbritje në blerjen tënde të parë dhe mëso i pari për koleksionet e reja.</p>
+      <div class="newsletter-form">
+        <input class="nl-input" placeholder="rea@gmail.com"/>
+        <button class="nl-btn">Regjistrohu</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LUMIÈRE</div>
+        <p class="footer-tag">"Ndriço çdo moment,<br>frymëzo çdo ndjesi."</p>
+        <div class="footer-socials">
+          <a href="#"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="fcol-title">Koleksionet</p>
+        <a href="#" class="flink">Qirinj Aromatikë</a>
+        <a href="#" class="flink">Qirinj Dekorativë</a>
+        <a href="#" class="flink">Ekologjikë</a>
+        <a href="#" class="flink">Festive & Romantikë</a>
+        <a href="#" class="flink">Aksesorë</a>
+      </div>
+      <div>
+        <p class="fcol-title">Kompania</p>
+        <a href="#" class="flink">Rreth nesh</a>
+        <a href="#" class="flink">Blog</a>
+        <a href="#" class="flink">Dyqanet tona</a>
+       <a href="contact.html" class="flink">Kontakt</a>
+        <a href="#" class="flink">Karriera</a>
+      </div>
+      <div>
+        <p class="fcol-title">Ndihma</p>
+        <a href="#" class="flink">Kthimet & Zëvendësimet</a>
+        <a href="#" class="flink">Informacion dërgese</a>
+        <a href="#" class="flink">FAQ</a>
+        <a href="#" class="flink">Politika e Privatësisë</a>
+        <a href="#" class="flink">Kushtet e Shërbimit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
+     
+    </div>
+  </footer>
+
+  <!-- CART TOAST -->
+  <div class="cart-toast" id="cartToast">
+    <i class="ti ti-check"></i>
+    <span id="toastMsg">Produkti u shtua në shportë!</span>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt — Lumière</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="contact.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    Dërgim falas për porosi mbi 3 000 L &nbsp;·&nbsp; 100% Dyllë Natyral &nbsp;·&nbsp; I punuar me dorë
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="index.html">Koleksionet</a>
+      <a href="index.html">Ide Dhuratash</a>
+      <a href="index.html">Bota Jonë</a>
+      <a href="index.html">Blog</a>
+    </div>
+    <a href="index.html" class="logo">LUMIÈRE</a>
+    <div class="nav-right">
+      <input class="nav-search" placeholder="Kërko..."/>
+      <div class="nav-icons">
+        <i class="ti ti-user"></i>
+        <span class="cart-wrap">
+          <i class="ti ti-shopping-bag"></i>
+          <span id="cart-badge"></span>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <p class="eyebrow" style="color:rgba(245,239,214,0.55)">Na shkruani</p>
+      <h1 class="page-hero-h">Kontakto <em>Lumière</em></h1>
+      <p class="page-hero-sub">Jemi këtu për çdo pyetje, sugjerim apo porosite speciale. Do t'ju përgjigjemi brenda 24 orësh.</p>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Kryefaqja</a>
+    <i class="ti ti-chevron-right"></i>
+    <span>Kontakt</span>
+  </div>
+
+  <!-- MAIN CONTACT SECTION -->
+  <section class="contact-section">
+
+    <!-- INFO CARDS -->
+    <div class="info-cards">
+      <div class="info-card reveal">
+        <div class="info-icon"><i class="ti ti-map-pin"></i></div>
+        <p class="info-title">Adresa jonë</p>
+        <p class="info-text">Rruga Myslym Shyri, Nr. 24<br>Tiranë, Albania</p>
+        <a href="https://maps.google.com" target="_blank" class="info-link">Hap në hartë <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-icon"><i class="ti ti-phone"></i></div>
+        <p class="info-title">Na telefononi</p>
+        <p class="info-text">+355 69 123 4567<br>E Hënë – E Premte, 09:00 – 18:00</p>
+        <a href="tel:+355691234567" class="info-link">Telefono tani <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-icon"><i class="ti ti-mail"></i></div>
+        <p class="info-title">Na shkruani</p>
+        <p class="info-text">info@lumiere.al<br>Përgjigje brenda 24 orësh</p>
+        <a href="mailto:info@lumiere.al" class="info-link">Dërgo email <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-icon"><i class="ti ti-brand-instagram"></i></div>
+        <p class="info-title">Rrjetet sociale</p>
+        <p class="info-text">@lumiere.albania<br>Ndiqni për koleksione të reja</p>
+        <div class="social-row">
+          <a href="#" class="social-ico"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#" class="social-ico"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" class="social-ico"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM + MAP -->
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="form-wrap reveal">
+        <p class="eyebrow">Formulari i kontaktit</p>
+        <h2 class="form-title">Na dërgoni një mesazh</h2>
+        <p class="form-sub">Plotësoni formularin dhe ekipi ynë do t'ju kontaktojë sa më shpejt të jetë e mundur.</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Emri <span class="req">*</span></label>
+              <input type="text" id="fname" name="fname" placeholder="Emri juaj" autocomplete="given-name"/>
+              <span class="err-msg" id="err-fname"></span>
+            </div>
+            <div class="form-group">
+              <label for="lname">Mbiemri <span class="req">*</span></label>
+              <input type="text" id="lname" name="lname" placeholder="Mbiemri juaj" autocomplete="family-name"/>
+              <span class="err-msg" id="err-lname"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="email@juaj.com" autocomplete="email"/>
+            <span class="err-msg" id="err-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Telefoni</label>
+            <input type="tel" id="phone" name="phone" placeholder="+355 6X XXX XXXX" autocomplete="tel"/>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Tema <span class="req">*</span></label>
+            <select id="subject" name="subject">
+              <option value="" disabled selected>Zgjidhni temën...</option>
+              <option value="order">Informacion mbi porosinë</option>
+              <option value="product">Pyetje mbi produktet</option>
+              <option value="custom">Porosi e personalizuar</option>
+              <option value="wholesale">Bashkëpunim / Shumicë</option>
+              <option value="return">Kthim / Ankesë</option>
+              <option value="other">Tjetër</option>
+            </select>
+            <span class="err-msg" id="err-subject"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mesazhi <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Shkruani mesazhin tuaj këtu..."></textarea>
+            <span class="err-msg" id="err-message"></span>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="privacy" name="privacy"/>
+            <label for="privacy">Pranoj <a href="#">Politikën e Privatësisë</a> dhe dëshiroj të kontaktohem nga Lumière.</label>
+          </div>
+          <span class="err-msg" id="err-privacy"></span>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">Dërgo mesazhin</span>
+            <i class="ti ti-send"></i>
+          </button>
+        </form>
+
+        <!-- SUCCESS STATE -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon"><i class="ti ti-circle-check"></i></div>
+          <h3>Mesazhi u dërgua!</h3>
+          <p>Faleminderit që na kontaktuat. Do t'ju përgjigjemi brenda 24 orësh në adresën tuaj email.</p>
+          <button class="btn btn-dark" onclick="resetForm()">Dërgo mesazh tjetër</button>
+        </div>
+      </div>
+
+      <!-- MAP PLACEHOLDER + HOURS -->
+      <div class="map-side">
+        <div class="map-box reveal">
+          <div class="map-placeholder">
+            <i class="ti ti-map-2"></i>
+            <p>Harta interaktive</p>
+            <span>Rruga Myslym Shyri, Tiranë</span>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-dark" style="margin-top:16px;font-size:9px;">
+              Hap Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="hours-card reveal">
+          <p class="eyebrow">Orari i dyqanit</p>
+          <h3 class="hours-title">Vizitoni dyqanin fizik</h3>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span>E Hënë – E Premte</span>
+              <span class="hours-time">09:00 – 19:00</span>
+            </div>
+            <div class="hours-row">
+              <span>E Shtunë</span>
+              <span class="hours-time">10:00 – 17:00</span>
+            </div>
+            <div class="hours-row">
+              <span>E Diel</span>
+              <span class="hours-time closed">Mbyllur</span>
+            </div>
+          </div>
+          <div class="open-badge">
+            <span class="open-dot"></span>
+            <span id="openStatus">Duke kontrolluar...</span>
+          </div>
+        </div>
+
+        <div class="faq-card reveal">
+          <p class="eyebrow">Pyetjet e shpeshta</p>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q">Sa zgjat dërgesa? <i class="ti ti-chevron-down"></i></button>
+              <div class="faq-a">Dërgesa standarde është 2-4 ditë pune. Ofrojmë edhe dërgim ekspres 24 orë.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">A mund të kthehem produktin? <i class="ti ti-chevron-down"></i></button>
+              <div class="faq-a">Po, pranojmë kthime brenda 14 ditëve nga marrja e produktit, nëse është i papërdorur dhe në paketim origjinal.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-q">A bëni porosi të personalizuara? <i class="ti ti-chevron-down"></i></button>
+              <div class="faq-a">Absolutisht! Na kontaktoni për qirinj me aromën, ngjyrën apo mesazhin tuaj të preferuar.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LUMIÈRE</div>
+        <p class="footer-tag">"Ndriço çdo moment,<br>frymëzo çdo ndjesi."</p>
+        <div class="footer-socials">
+          <a href="#"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="fcol-title">Koleksionet</p>
+        <a href="index.html" class="flink">Qirinj Aromatikë</a>
+        <a href="index.html" class="flink">Qirinj Dekorativë</a>
+        <a href="index.html" class="flink">Ekologjikë</a>
+        <a href="index.html" class="flink">Festive & Romantikë</a>
+      </div>
+      <div>
+        <p class="fcol-title">Kompania</p>
+        <a href="index.html" class="flink">Rreth nesh</a>
+        <a href="index.html" class="flink">Blog</a>
+        <a href="index.html" class="flink">Dyqanet tona</a>
+        <a href="contact.html" class="flink" style="color:#013220;font-weight:500">Kontakt</a>
+      </div>
+      <div>
+        <p class="fcol-title">Ndihma</p>
+        <a href="#" class="flink">Kthimet</a>
+        <a href="#" class="flink">Dërgesa</a>
+        <a href="#" class="flink">FAQ</a>
+        <a href="#" class="flink">Privatësia</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
+      <p class="fcopy">Dizajnuar me ♥ në Tiranë</p>
+    </div>
+  </footer>
+
+  <div class="cart-toast" id="cartToast">
+    <i class="ti ti-check"></i>
+    <span id="toastMsg">Produkti u shtua në shportë!</span>
+  </div>
+
+  <script src="contact.js"></script>
+</body>
+</html>
