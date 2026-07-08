@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shop — Lumière</title>
   <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="shop.css"/>
+  <link rel="stylesheet" href="css/shop.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
@@ -17,13 +17,14 @@
   </div>
 
   <!-- NAV -->
-  <nav class="nav">
+<nav class="nav">
     <div class="nav-left">
-      <a href="index.html">Koleksionet</a>
-      <a href="shop.html" class="active">Ide Dhuratash</a>
-      <a href="index.html">Bota Jonë</a>
-      <a href="index.html">Blog</a>
+      <a href="collections.html">Koleksionet</a>
+      <a href="gift.html">Ide Dhuratash</a>
+      <a href="about.html" class="active">Bota Jonë</a>
+      <a href="blog.html">Blog</a>
       <a href="contact.html">Kontakt</a>
+     
     </div>
     <a href="index.html" class="logo">LUMIÈRE</a>
     <div class="nav-right">
@@ -38,8 +39,8 @@
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
-  <section class="shop-hero">
+ 
+  <section class="shop-hero" >
     <div class="shop-hero-content">
       <p class="eyebrow" style="color:rgba(245,239,214,0.55)">Koleksioni i plotë</p>
       <h1 class="shop-hero-h">Të gjithë qirinjtë <em>Lumière</em></h1>
@@ -116,7 +117,7 @@
         <div class="filter-list">
           <label class="filter-check"><input type="checkbox" value="lavande"/> Lavandë</label>
           <label class="filter-check"><input type="checkbox" value="vanilje"/> Vanilje</label>
-          <label class="filter-check"><input type="checkbox" value="trendarfile"/> Trëndafile</label>
+          <label class="filter-check"><input type="checkbox" value="trendarfil"/> Trëndafil</label>
           <label class="filter-check"><input type="checkbox" value="sandalwood"/> Sandalwood</label>
           <label class="filter-check"><input type="checkbox" value="amber"/> Amber & Oud</label>
           <label class="filter-check"><input type="checkbox" value="pishe"/> Pishe & Dëllinjë</label>
@@ -139,10 +140,9 @@
 
     </aside>
 
-    <!-- MAIN PRODUCTS -->
     <main class="shop-main">
 
-      <!-- TOOLBAR -->
+     
       <div class="shop-toolbar">
         <p class="results-count"><span id="countNum">24</span> produkte</p>
         <div class="toolbar-right">
@@ -160,16 +160,16 @@
         </div>
       </div>
 
-      <!-- ACTIVE FILTER TAGS -->
+     
       <div class="active-tags" id="activeTags"></div>
 
-      <!-- PRODUCTS GRID -->
+      
       <div class="products-grid" id="productsGrid">
 
-        <!-- PRODUCT CARDS — foto vendosen te img src="" -->
+    
         <div class="shop-card" data-cat="aromatike" data-price="1200" data-name="Provence">
           <div class="shop-card-img">
-            <img src="" alt="Provence" class="prod-photo"/>
+            <img src="images/il_1588xN.7666017445_c4ol.avif" alt="Provence" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -188,9 +188,9 @@
 
         <div class="shop-card" data-cat="dekorative" data-price="1550" data-name="Verde Pillar">
           <div class="shop-card-img">
-            <img src="" alt="Verde Pillar" class="prod-photo"/>
+            <img src="images/soy candles.webp" alt="Verde Pillar" class="prod-photo"/>
             <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
+              <button class="quick-add">shiko produktin</button>
             </div>
           </div>
           <div class="shop-card-body">
@@ -206,7 +206,7 @@
 
         <div class="shop-card" data-cat="ekologjike" data-price="850" data-name="Lumière Classic">
           <div class="shop-card-img">
-            <img src="" alt="Lumière Classic" class="prod-photo"/>
+            <img src="images/il_1588xN.3162499558_i4yy.webp" alt="Lumière Classic" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -225,9 +225,9 @@
 
         <div class="shop-card" data-cat="festive" data-price="2800" data-name="Set Krishtlindjesh">
           <div class="shop-card-img">
-            <img src="" alt="Set Krishtlindjesh" class="prod-photo"/>
+            <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Set Krishtlindjesh" class="prod-photo"/>
             <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
+              <button class="quick-add">shiko produktin</button>
             </div>
           </div>
           <div class="shop-card-body">
@@ -243,13 +243,13 @@
 
         <div class="shop-card" data-cat="romantike" data-price="1100" data-name="Rosa Serata">
           <div class="shop-card-img">
-            <img src="" alt="Rosa Serata" class="prod-photo"/>
+            <img src="images/rosaserata.jpg" alt="Rosa Serata" class="prod-photo"/>
             <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
+              <button class="quick-add">shiko produktin</button>
             </div>
           </div>
           <div class="shop-card-body">
-            <p class="shop-card-tag">Romantike · Trëndafile</p>
+            <p class="shop-card-tag">Romantike · Trëndafil</p>
             <p class="shop-card-name">Rosa Serata</p>
             <p class="shop-card-detail"><i class="ti ti-clock"></i> 40 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
             <div class="shop-card-foot">
@@ -261,7 +261,7 @@
 
         <div class="shop-card" data-cat="aromatike" data-price="1350" data-name="Amber Nuit">
           <div class="shop-card-img">
-            <img src="" alt="Amber Nuit" class="prod-photo"/>
+            <img src="images/20260110-AmberNoirCandle.webp" alt="Amber Nuit" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -279,7 +279,7 @@
 
         <div class="shop-card" data-cat="aromatike" data-price="980" data-name="Citrus Garden">
           <div class="shop-card-img">
-            <img src="" alt="Citrus Garden" class="prod-photo"/>
+            <img src="images/citrus candle.png" alt="Citrus Garden" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -297,7 +297,7 @@
 
         <div class="shop-card" data-cat="ekologjike" data-price="1650" data-name="Forest Pine">
           <div class="shop-card-img">
-            <img src="" alt="Forest Pine" class="prod-photo"/>
+            <img src="images/il_600x600.7475990337_5j8y.avif" alt="Forest Pine" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -315,7 +315,7 @@
 
         <div class="shop-card" data-cat="dekorative" data-price="720" data-name="Mini Votive Set">
           <div class="shop-card-img">
-            <img src="" alt="Mini Votive Set" class="prod-photo"/>
+            <img src="images/minivotive.webp" alt="Mini Votive Set" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -337,7 +337,7 @@
 
         <div class="shop-card" data-cat="romantike" data-price="1800" data-name="Velvet Rose">
           <div class="shop-card-img">
-            <img src="" alt="Velvet Rose" class="prod-photo"/>
+            <img src="images/velvet rose.jpg" alt="Velvet Rose" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -355,7 +355,7 @@
 
         <div class="shop-card" data-cat="festive" data-price="3200" data-name="Set Ditëlindjesh">
           <div class="shop-card-img">
-            <img src="" alt="Set Ditëlindjesh" class="prod-photo"/>
+            <img src="images/gift box2.avif" alt="Set Ditëlindjesh" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -373,7 +373,7 @@
 
         <div class="shop-card" data-cat="dekorative" data-price="1100" data-name="Ivory Column">
           <div class="shop-card-img">
-            <img src="" alt="Ivory Column" class="prod-photo"/>
+            <img src="images/ivory candles.jpg" alt="Ivory Column" class="prod-photo"/>
             <div class="shop-card-overlay">
               <button class="quick-add">+ Shto shpejt</button>
             </div>
@@ -390,16 +390,15 @@
         </div>
 
       </div>
-      <!-- END GRID -->
+     
 
-      <!-- NO RESULTS -->
       <div class="no-results" id="noResults" style="display:none;">
         <i class="ti ti-mood-sad"></i>
         <p>Asnjë produkt nuk u gjet me këto filtra.</p>
         <button class="btn btn-dark" onclick="document.getElementById('clearFilters').click()">Pastro filtrat</button>
       </div>
 
-      <!-- PAGINATION -->
+     
       <div class="pagination" id="pagination">
         <button class="page-btn active">1</button>
         <button class="page-btn">2</button>
