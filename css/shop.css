@@ -1,4 +1,4 @@
-/* ── SHOP HERO ── */
+
 .shop-hero {
   background: linear-gradient(135deg, #013220 0%, #535C39 60%, #7E8C54 100%);
   height: 280px;
@@ -60,7 +60,6 @@
   background: #F5EFD6;
 }
 
-/* ── SIDEBAR ── */
 .sidebar {
   border-right: 0.5px solid #C8BC90;
   padding: 36px 28px;
@@ -127,7 +126,7 @@
   flex-shrink: 0;
 }
 
-/* PRICE RANGE */
+
 .price-range { display: flex; flex-direction: column; gap: 12px; }
 .price-inputs { display: flex; align-items: center; gap: 8px; }
 .price-input-wrap {
@@ -185,10 +184,10 @@
 }
 .clear-filters-btn:hover { background: #013220; color: #F5EFD6; border-color: #013220; }
 
-/* ── SHOP MAIN ── */
+
 .shop-main { padding: 32px 40px 64px; }
 
-/* TOOLBAR */
+
 .shop-toolbar {
   display: flex;
   align-items: center;
@@ -252,7 +251,7 @@
 .tag-pill:hover { background: #535C39; }
 .tag-pill i { font-size: 11px; }
 
-/* ── PRODUCTS GRID ── */
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -263,7 +262,7 @@
   grid-template-columns: 1fr;
 }
 
-/* SHOP CARD */
+
 .shop-card {
   background: #EDE6C8;
   border: 0.5px solid #C8BC90;
@@ -393,7 +392,7 @@
   margin-left: 6px;
 }
 
-/* LIST VIEW CARD */
+
 .products-grid.list-view .shop-card {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -401,7 +400,7 @@
 .products-grid.list-view .shop-card-img { height: 140px; }
 .products-grid.list-view .shop-card:hover { transform: translateY(-2px); }
 
-/* NO RESULTS */
+
 .no-results {
   text-align: center;
   padding: 80px 40px;
@@ -410,7 +409,7 @@
 .no-results i { font-size: 48px; margin-bottom: 16px; display: block; }
 .no-results p { font-size: 14px; color: #535C39; margin-bottom: 24px; }
 
-/* PAGINATION */
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -436,7 +435,7 @@
 .page-btn.active { background: #013220; color: #F5EFD6; border-color: #013220; }
 .page-next { width: auto; padding: 0 12px; }
 
-/* ACTIVE NAV */
+
 .nav-left a.active {
   color: #013220;
 }
