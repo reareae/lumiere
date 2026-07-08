@@ -170,13 +170,40 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('gridView').classList.remove('active');
   });
 
-  /* ── PAGINATION ── */
-  document.querySelectorAll('.page-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
-      if (!btn.classList.contains('page-next')) btn.classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+/* ── PAGINATION ── */
+const productsPerPage = 12;
+const cards = [...document.querySelectorAll('.shop-card')];
+const pageButtons = document.querySelectorAll('.page-btn:not(.page-next)');
+let currentPage = 1;
+
+function showPage(page) {
+  currentPage = page;
+
+  cards.forEach((card, index) => {
+    const start = (page - 1) * productsPerPage;
+    const end = start + productsPerPage;
+
+    card.classList.toggle('hidden', !(index >= start && index < end));
   });
 
+  pageButtons.forEach(btn => btn.classList.remove('active'));
+  pageButtons[page - 1]?.classList.add('active');
+}
+
+showPage(1);
+
+pageButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    showPage(index + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
+
+document.querySelector('.page-next')?.addEventListener('click', () => {
+  if (currentPage < pageButtons.length) {
+    showPage(currentPage + 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
+
+}); 
