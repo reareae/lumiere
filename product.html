@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produkt — Lumière</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/product.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="topbar">
+    Dërgim falas për porosi mbi 3 000 L &nbsp;·&nbsp; 100% Dyllë Natyral &nbsp;·&nbsp; I punuar me dorë
+  </div>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="collections.html">Koleksionet</a>
+      <a href="gift.html">Ide Dhuratash</a>
+      <a href="about.html">Bota Jonë</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <a href="index.html" class="logo">LUMIÈRE</a>
+    <div class="nav-right">
+      <input class="nav-search" placeholder="Kërko..."/>
+      <div class="nav-icons">
+        <i class="ti ti-user"></i>
+        <span class="cart-wrap">
+          <i class="ti ti-shopping-bag" id="cartIconNav"></i>
+          <span id="cart-badge"></span>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb" id="breadcrumb">
+    <a href="index.html">Kryefaqja</a>
+    <i class="ti ti-chevron-right"></i>
+    <a href="shop.html">Shop</a>
+    <i class="ti ti-chevron-right"></i>
+    <span id="breadcrumb-name">...</span>
+  </div>
+
+  <!-- PRODUCT DETAIL -->
+  <section class="product-section">
+    <div class="product-grid">
+
+      <!-- LEFT: IMAGES -->
+      <div class="product-gallery">
+        <div class="product-main-img" id="mainImg">
+          <img id="mainPhoto" src="" alt=""/>
+        </div>
+        <div class="product-thumbs" id="thumbs"></div>
+      </div>
+
+      <!-- RIGHT: INFO -->
+      <div class="product-info">
+        <p class="product-tag" id="prodTag"></p>
+        <h1 class="product-name" id="prodName"></h1>
+        <div class="product-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-count">(24 vlerësime)</span>
+        </div>
+        <p class="product-price" id="prodPrice"></p>
+        <p class="product-desc" id="prodDesc"></p>
+
+        <div class="product-meta">
+          <div class="meta-item">
+            <i class="ti ti-clock"></i>
+            <span id="metaBurn"></span>
+          </div>
+          <div class="meta-item">
+            <i class="ti ti-leaf"></i>
+            <span id="metaWax"></span>
+          </div>
+          <div class="meta-item">
+            <i class="ti ti-package"></i>
+            <span id="metaSize"></span>
+          </div>
+        </div>
+
+        <div class="product-scent-wrap">
+          <p class="product-label">Aroma</p>
+          <p class="product-scent" id="prodScent"></p>
+        </div>
+
+        <div class="product-ingredients-wrap">
+          <p class="product-label">Përbërësit</p>
+          <p class="product-ingredients" id="prodIngredients"></p>
+        </div>
+
+        <div class="product-qty-wrap">
+          <p class="product-label">Sasia</p>
+          <div class="qty-control">
+            <button class="qty-btn" id="qtyMinus">−</button>
+            <span class="qty-num" id="qtyNum">1</span>
+            <button class="qty-btn" id="qtyPlus">+</button>
+          </div>
+        </div>
+
+        <div class="product-actions">
+          <button class="btn-add-cart" id="addToCartBtn">
+            <i class="ti ti-shopping-bag"></i> Shto në shportë
+          </button>
+          <button class="btn-wishlist" id="wishlistBtn">
+            <i class="ti ti-heart"></i>
+          </button>
+        </div>
+
+        <div class="product-guarantees">
+          <div class="guarantee-item">
+            <i class="ti ti-truck-delivery"></i>
+            <span>Dërgim falas mbi 3 000 L</span>
+          </div>
+          <div class="guarantee-item">
+            <i class="ti ti-refresh"></i>
+            <span>Kthim brenda 14 ditëve</span>
+          </div>
+          <div class="guarantee-item">
+            <i class="ti ti-shield-check"></i>
+            <span>Garanci cilësie Lumière</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div class="related-section">
+      <p class="eyebrow">Mund t'ju pëlqejë gjithashtu</p>
+      <h2 class="related-title">Produkte të ngjashme</h2>
+      <div class="related-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LUMIÈRE</div>
+        <p class="footer-tag">"Ndriço çdo moment,<br>frymëzo çdo ndjesi."</p>
+        <div class="footer-socials">
+          <a href="#"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="fcol-title">Shop</p>
+        <a href="shop.html" class="flink">Shop All</a>
+        <a href="collections.html" class="flink">Koleksionet</a>
+        <a href="gift.html" class="flink">Ide Dhuratash</a>
+      </div>
+      <div>
+        <p class="fcol-title">Kompania</p>
+        <a href="about.html" class="flink">Bota Jonë</a>
+        <a href="blog.html" class="flink">Blog</a>
+        <a href="contact.html" class="flink">Kontakt</a>
+      </div>
+      <div>
+        <p class="fcol-title">Ndihma</p>
+        <a href="#" class="flink">Kthimet</a>
+        <a href="#" class="flink">Dërgesa</a>
+        <a href="#" class="flink">FAQ</a>
+        <a href="#" class="flink">Privatësia</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
+      <p class="fcopy">Dizajnuar me ♥ në Tiranë</p>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Shporta juaj</h3>
+      <button class="cart-close" id="cartClose"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span class="cart-total-price" id="cartTotal">0 L</span>
+      </div>
+      <a href="#" class="cart-checkout-btn">Vazhdo me blerjen</a>
+      <a href="shop.html" class="cart-continue-btn">Vazhdo blerjet</a>
+    </div>
+  </div>
+
+  <div class="cart-toast" id="cartToast">
+    <i class="ti ti-check"></i>
+    <span id="toastMsg"></span>
+  </div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — Lumière</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/blog.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="topbar">
+    Dërgim falas për porosi mbi 3 000 L &nbsp;·&nbsp; 100% Dyllë Natyral &nbsp;·&nbsp; I punuar me dorë
+  </div>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="collections.html">Koleksionet</a>
+      <a href="gift.html">Ide Dhuratash</a>
+      <a href="about.html">Bota Jonë</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Kontakt</a>
+    </div>
+    <a href="index.html" class="logo">LUMIÈRE</a>
+    <div class="nav-right">
+      <input class="nav-search" placeholder="Kërko..."/>
+      <div class="nav-icons">
+        <i class="ti ti-user"></i>
+        <span class="cart-wrap">
+          <i class="ti ti-shopping-bag"></i>
+          <span id="cart-badge"></span>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="blog-hero-img">
+      <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Blog Lumière"/>
+      <div class="blog-hero-overlay"></div>
+    </div>
+    <div class="blog-hero-content">
+      <p class="eyebrow" style="color:rgba(245,239,214,0.55)">Blogu Lumière</p>
+      <h1 class="blog-hero-h">Tregime, aromë<br>dhe <em>inspirim</em></h1>
+      <p class="blog-hero-sub">Zbuloni botën pas qirinjve tanë — procesi, aromat dhe momentet që na frymëzojnë.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <a href="index.html">Kryefaqja</a>
+    <i class="ti ti-chevron-right"></i>
+    <span>Blog</span>
+  </div>
+
+  <!-- BLOG LIST -->
+  <section class="blog-section" id="blog-list">
+
+    <!-- ARTICLE 1 — FEATURED (dimëror) -->
+    <article class="blog-featured-card" data-id="dimri" onclick="openArticle('dimri')">
+      <div class="bfc-img">
+        <img src="images/set krishlindje.jpg" alt="Koleksioni Dimëror"/>
+        <span class="bfc-badge">I ri · Koleksion</span>
+      </div>
+      <div class="bfc-text">
+        <p class="blog-meta"><i class="ti ti-calendar"></i> 08 Korrik 2026 &nbsp;·&nbsp; <i class="ti ti-clock"></i> 4 min lexim</p>
+        <h2 class="bfc-title">Koleksioni i Ri Dimëror Lumière — Aroma që ngrohin netët e gjata</h2>
+        <p class="bfc-excerpt">Pishe, kanellë, sandalwood dhe amber — katër aroma që kemi zgjedhur me kujdes për të krijuar atmosferën perfekte dimërore. Zbuloni historinë prapa koleksionit tonë të ri dhe produktet që e përbëjnë atë.</p>
+        <span class="blog-read-btn">Lexo artikullin <i class="ti ti-arrow-right"></i></span>
+      </div>
+    </article>
+
+    <div class="blog-divider"></div>
+
+    <!-- ARTICLES 2 & 3 -->
+    <div class="blog-two-col">
+
+      <article class="blog-small-card" data-id="vera" onclick="openArticle('vera')">
+        <div class="bsc-img">
+          <img src="images/citrus candle.png" alt="Koleksioni Veror"/>
+          <span class="bfc-badge">Koleksion · Verë</span>
+        </div>
+        <div class="bsc-text">
+          <p class="blog-meta"><i class="ti ti-calendar"></i> 01 Qershor 2026 &nbsp;·&nbsp; <i class="ti ti-clock"></i> 3 min</p>
+          <h3 class="bsc-title">5 Aromat e Verës 2026 — Freskinë që dëshironit</h3>
+          <p class="bsc-excerpt">Citrus, frangipani, kokosi dhe menta e freskët — aromat tona verore që transformojnë çdo ambient të nxehtë verore.</p>
+          <span class="blog-read-btn">Lexo <i class="ti ti-arrow-right"></i></span>
+        </div>
+      </article>
+
+      <article class="blog-small-card" data-id="kujdes" onclick="openArticle('kujdes')">
+        <div class="bsc-img">
+          <img src="images/soy candles.webp" alt="Kujdesi për qirinjtë"/>
+          <span class="bfc-badge">Këshilla</span>
+        </div>
+        <div class="bsc-text">
+          <p class="blog-meta"><i class="ti ti-calendar"></i> 15 Maj 2026 &nbsp;·&nbsp; <i class="ti ti-clock"></i> 5 min</p>
+          <h3 class="bsc-title">Si të kujdeseni për qirinjtë tuaj — 6 rregulla të artit</h3>
+          <p class="bsc-excerpt">Herën e parë djegie është kritike. Mësoni se si ta bëni saktë dhe si të zgjatni jetën e qirinjve tuaj me këto këshilla ekspertësh.</p>
+          <span class="blog-read-btn">Lexo <i class="ti ti-arrow-right"></i></span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ARTICLE PAGES (hidden) -->
+  <div class="article-page" id="article-dimri" style="display:none">
+    <div class="article-header">
+      <img src="images/set krishlindje.jpg" alt="Koleksioni Dimëror" class="article-hero-img"/>
+      <div class="article-header-overlay"></div>
+      <div class="article-header-text">
+        <span class="bfc-badge">I ri · Koleksion</span>
+        <h1 class="article-title">Koleksioni i Ri Dimëror Lumière</h1>
+        <p class="article-subtitle">Aroma që ngrohin netët e gjata</p>
+        <p class="article-meta"><i class="ti ti-calendar"></i> 08 Korrik 2026 &nbsp;·&nbsp; <i class="ti ti-user"></i> Elena Duka &nbsp;·&nbsp; <i class="ti ti-clock"></i> 4 min lexim</p>
+      </div>
+    </div>
+    <div class="article-body">
+      <button class="article-back" onclick="closeArticle()"><i class="ti ti-arrow-left"></i> Kthehu te blogu</button>
+
+      <div class="article-content">
+        <p class="article-lead">Dimri 2026 erdhi me qirinjtë tanë më të veçantë deri tani — katër aroma të reja, të frymëzuara nga netët e gjata dimërore dhe ngrohtësia e familjes.</p>
+
+        <h2>Pse u krijua ky koleksion</h2>
+        <p>Gjatë dimrit të kaluar, ekipi ynë bashkoi klientët të cilët na treguan se çfarë dëshirojnë më shumë — aromë ngrohtësie, familje, dhe momenteve të qeta pranë zjarrit. Kjo ishte frymëzimi ynë.</p>
+        <p>Sara, specialistja jonë e aromave, kaloi tre muaj duke testuar kombinime të pishe alpine me amber, kanellë me sandalwood, dhe dëllinjë me musk të bardhë. Rezultati — katër aroma unike që e bëjnë çdo dhomë të ndihet si vendpushim dimëror.</p>
+
+        <div class="article-img-full">
+          <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Produktet e koleksionit"/>
+          <p class="article-img-caption">Produktet e Koleksionit Dimëror 2026 — Set Krishtlindjesh, Glow Globes dhe Forest Pine</p>
+        </div>
+
+        <h2>Produktet e koleksionit</h2>
+        <p><strong>Forest Pine (1 650 L)</strong> — Pishe alpine e kombinuar me dëllinjë dhe cedër. Koha e djegies 65 orë — qiri jonë me jetën më të gjatë. Ideal për dhoma të mëdha dhe hapësira të hapura.</p>
+        <p><strong>Glow Globes (4 000 L)</strong> — Koleksioni premium — sfera qirinjsh me sandalwood dhe musk të bardhë. Forma e rrumbullakët unike e bën edhe element dekorativ të veçantë.</p>
+        <p><strong>Set Krishtlindjesh (2 800 L)</strong> — Dy qirinj artizanalë me aromë pishe dhe kanellë, të paketuar në kuti dhuratë elegante. Dhurata perfekte festive.</p>
+
+        <div class="article-quote">
+          <blockquote>"Dimri nuk është vetëm stinë — është ndjesi. Dhe ne donim ta kapnim atë ndjesi brenda një qiriu."</blockquote>
+          <cite>— Sara Hoxha, Specialiste Aromash</cite>
+        </div>
+
+        <h2>Si t'i kombinoni</h2>
+        <p>Rekomandojmë Forest Pine në dhomën e ndenjes, Set Krishtlindjesh si qendërkërkesë tryeze, dhe Glow Globes si dekor banak. Bashkë krijojnë një eksperiencë të plotë aromatike dimërore.</p>
+
+        <div class="article-cta-box">
+          <p>Koleksioni Dimëror është i disponueshëm tani — sasi të kufizuara.</p>
+          <a href="shop.html" class="btn btn-dark">Shiko koleksionin</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-page" id="article-vera" style="display:none">
+    <div class="article-header">
+      <img src="images/citrus candle.png" alt="Koleksioni Veror" class="article-hero-img"/>
+      <div class="article-header-overlay"></div>
+      <div class="article-header-text">
+        <span class="bfc-badge">Koleksion · Verë</span>
+        <h1 class="article-title">5 Aromat e Verës 2026</h1>
+        <p class="article-subtitle">Freskinë që dëshironit</p>
+        <p class="article-meta"><i class="ti ti-calendar"></i> 01 Qershor 2026 &nbsp;·&nbsp; <i class="ti ti-user"></i> Sara Hoxha &nbsp;·&nbsp; <i class="ti ti-clock"></i> 3 min lexim</p>
+      </div>
+    </div>
+    <div class="article-body">
+      <button class="article-back" onclick="closeArticle()"><i class="ti ti-arrow-left"></i> Kthehu te blogu</button>
+      <div class="article-content">
+        <p class="article-lead">Vera 2026 solli aromat tona më të freskëta dhe energjizuese — një festë citrusesh, lulesh tropikale dhe barishtëve mesdhetare.</p>
+
+        <h2>Pse vera ka aromën e vet</h2>
+        <p>Ndërkohë që dimri kërkon ngrohtësi dhe thellësi, vera kërkon dritë dhe freski. Aromat verore duhet të jenë të lehta, energjizuese dhe të mos mbulojnë ajrin — por ta freskojnë atë.</p>
+
+        <div class="article-img-full">
+          <img src="images/lavender.jpg" alt="Aromat verore"/>
+        </div>
+
+        <h2>5 aromat tona të preferuara</h2>
+        <p><strong>1. Citrus Garden</strong> — Grejpfrut, limon dhe baziliku. Freski mesdhetare në çdo frymëmarrje.</p>
+        <p><strong>2. Lavender Wonder</strong> — Lavandë alpine me kamonille. Relaksim i plotë edhe gjatë netëve të nxehta.</p>
+        <p><strong>3. Rose & Vanilla Dream</strong> — Trëndafili i freskët me vanilje të lehtë. Romanticizëm veror.</p>
+        <p><strong>4. Rosa Serata</strong> — Trëndafil me musk dhe lychee. Perfekt për mbrëmjet e gjata verore.</p>
+        <p><strong>5. Citrus Garden Mini</strong> — E njëjta formulë, format i vogël — ideal për banjë dhe zyrë.</p>
+
+        <div class="article-cta-box">
+          <p>Aromat verore janë ende të disponueshme — por me sasi të kufizuara.</p>
+          <a href="shop.html" class="btn btn-dark">Shiko shop all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-page" id="article-kujdes" style="display:none">
+    <div class="article-header">
+      <img src="images/soy candles.webp" alt="Kujdesi" class="article-hero-img"/>
+      <div class="article-header-overlay"></div>
+      <div class="article-header-text">
+        <span class="bfc-badge">Këshilla</span>
+        <h1 class="article-title">Si të kujdeseni për qirinjtë tuaj</h1>
+        <p class="article-subtitle">6 rregulla të artit</p>
+        <p class="article-meta"><i class="ti ti-calendar"></i> 15 Maj 2026 &nbsp;·&nbsp; <i class="ti ti-user"></i> Elena Duka &nbsp;·&nbsp; <i class="ti ti-clock"></i> 5 min lexim</p>
+      </div>
+    </div>
+    <div class="article-body">
+      <button class="article-back" onclick="closeArticle()"><i class="ti ti-arrow-left"></i> Kthehu te blogu</button>
+      <div class="article-content">
+        <p class="article-lead">Qirinjtë artizanalë meritojnë kujdes të veçantë. Këto 6 rregulla do t'i bëjnë qirinjtë tuaj të zgjasin dyfish dhe të aromatizohen dyfishi.</p>
+
+        <h2>Rregulla 1 — Herën e parë djegie është kritike</h2>
+        <p>Herën e parë, lëreni qirinë të digjet derisa dylli të shkrihet deri në skajet e kavanozit — zakonisht 2-3 orë. Nëse e shuan para kësaj, krijohet "tuneli" dhe qiria nuk do të djeget kurrë deri në fund.</p>
+
+        <h2>Rregulla 2 — Pritini fitilin para çdo djegie</h2>
+        <p>Çdo herë para ndezjes, pritini fitilin në 5-6mm. Fitili i gjatë krijon flakë të madhe, tym dhe djegie të pabarabartë. Mund të blini "wick trimmer" ose t'i preni me gërshërë të zakonshme.</p>
+
+        <div class="article-img-full">
+          <img src="images/il_1588xN.3162499558_i4yy.webp" alt="Kujdesi për qirinjtë"/>
+        </div>
+
+        <h2>Rregulla 3 — Mos e djegni më shumë se 4 orë</h2>
+        <p>Djegja e zgjatur nxeh kavanozin tepër dhe mund të ndikojë aromën. 3-4 orë janë optimale për çdo seanë djegie.</p>
+
+        <h2>Rregulla 4 — Larg rrymave të ajrit</h2>
+        <p>Rrymë ajri — ventilator, dritare e hapur — shkakton djegie të pabarabartë dhe tym. Vendoseni qirinë në vende të mbrojtura.</p>
+
+        <h2>Rregulla 5 — Ruajeni saktë</h2>
+        <p>Kur nuk e përdorni, mbulojeni me kapakun ose me letër. Drita e diellit zbeh ngjyrat dhe aromën. Temperaturë normale — mos e vini pranë nxehtësisë.</p>
+
+        <h2>Rregulla 6 — Ndaloni kur mbeten 1cm dyllë</h2>
+        <p>Mos e djegni deri në fund — lënia e 1-2cm dyllë mbron kavanozin nga nxehtësia e tepërt. Kavanozin mund ta ripërdorni si vazo ose mbajtëse lapsa.</p>
+
+        <div class="article-quote">
+          <blockquote>"Qiria e mirë e kujdesur jep aromë perfekte deri në pikën e fundit."</blockquote>
+          <cite>— Elena Duka, Themeluese Lumière</cite>
+        </div>
+
+        <div class="article-cta-box">
+          <p>Gati të blini qirinjtë tuaj të radhës?</p>
+          <a href="shop.html" class="btn btn-dark">Shiko shop all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LUMIÈRE</div>
+        <p class="footer-tag">"Ndriço çdo moment,<br>frymëzo çdo ndjesi."</p>
+        <div class="footer-socials">
+          <a href="#"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="fcol-title">Shop</p>
+        <a href="shop.html" class="flink">Shop All</a>
+        <a href="collections.html" class="flink">Koleksionet</a>
+        <a href="gift.html" class="flink">Ide Dhuratash</a>
+      </div>
+      <div>
+        <p class="fcol-title">Kompania</p>
+        <a href="about.html" class="flink">Bota Jonë</a>
+        <a href="blog.html" class="flink" style="color:#013220;font-weight:500">Blog</a>
+        <a href="contact.html" class="flink">Kontakt</a>
+      </div>
+      <div>
+        <p class="fcol-title">Ndihma</p>
+        <a href="#" class="flink">Kthimet</a>
+        <a href="#" class="flink">Dërgesa</a>
+        <a href="#" class="flink">FAQ</a>
+        <a href="#" class="flink">Privatësia</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
+      
+    </div>
+  </footer>
+
+  <script src="blog.js"></script>
+</body>
+</html>

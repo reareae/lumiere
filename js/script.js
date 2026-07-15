@@ -2,22 +2,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ══ NAV SCROLL ══ */
   const nav = document.querySelector('.nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  if (nav) {
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  }
 
-  /* ══ CART BADGE ══ */
-  let cartCount = 0;
+  /* ══ CART BADGE (Ruan numrin edhe kur ndryshon faqe) ══ */
+  // Merr numrin e ruajtur nga memoria e shfletuesit, nëse nuk ka asgjë fillon nga 0
+  let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+  
   const cartWrap = document.querySelector('.nav-icons .ti-shopping-bag')?.parentElement;
   const badge = document.createElement('span');
   badge.id = 'cart-badge';
+  
   if (cartWrap) {
     const wrap = document.createElement('span');
     wrap.className = 'cart-wrap';
     const icon = document.querySelector('.ti-shopping-bag');
-    icon.parentElement.replaceChild(wrap, icon);
-    wrap.appendChild(icon);
-    wrap.appendChild(badge);
+    if (icon) {
+      icon.parentElement.replaceChild(wrap, icon);
+      wrap.appendChild(icon);
+      wrap.appendChild(badge);
+    }
+    
+    // Shfaq numrin e saktë sapo ngarkohet faqja e re
+    if (cartCount > 0) {
+      badge.textContent = cartCount;
+      badge.style.display = 'flex';
+    } else {
+      badge.style.display = 'none';
+    }
   }
 
   /* ══ ADD TO CART ══ */
@@ -32,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = card?.dataset.name || 'Produkti';
 
       cartCount++;
+      // Ruan numrin e ri në memorien e shfletuesit
+      localStorage.setItem('cartCount', cartCount);
+      
       badge.textContent = cartCount;
       badge.style.display = 'flex';
 
@@ -42,10 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.style.cssText = '';
       }, 1400);
 
-      toastMsg.textContent = `"${name}" u shtua në shportë!`;
-      toast.classList.add('show');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+      if (toast && toastMsg) {
+        toastMsg.textContent = `"${name}" u shtua në shportë!`;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+      }
     });
   });
 
@@ -80,27 +100,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ══ SCROLL REVEAL ══ */
-const revealEls = document.querySelectorAll(
-  '.card, .val-item, .cat-card, .testi-card, .strip-item, .how-grid, .how-img-wrap'
-);
+  const revealEls = document.querySelectorAll(
+    '.card, .val-item, .cat-card, .testi-card, .strip-item, .how-grid, .how-img-wrap'
+  );
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, entry.target.dataset.delay || 0);
-      observer.unobserve(entry.target);
-    }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, entry.target.dataset.delay || 0);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.10 });
+
+  revealEls.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.dataset.delay = (i % 4) * 100;
+    observer.observe(el);
   });
-}, { threshold: 0.10 });
-
-revealEls.forEach((el, i) => {
-  el.classList.add('reveal');
-  el.dataset.delay = (i % 4) * 100;
-  observer.observe(el);
-});
-
 
   /* ══ CATEGORY HOVER SCALE ══ */
   document.querySelectorAll('.cat-card').forEach(card => {

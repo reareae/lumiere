@@ -6,6 +6,8 @@
   <title>Shop — Lumière</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/shop.css"/>
+  <link rel="stylesheet" href="css/product.css"/>
+  <link rel="stylesheet" href="css/cart.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
@@ -171,11 +173,13 @@
       <div class="products-grid" id="productsGrid">
 
     
-        <div class="shop-card" data-cat="aromatike" data-price="1200" data-name="Provence">
+        <div class="shop-card" data-cat="aromatike" data-id="provence" data-price="1200" data-name="Provence">
           <div class="shop-card-img">
             <img src="images/il_1588xN.7666017445_c4ol.avif" alt="Provence" class="prod-photo"/>
             <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
+              <button class="quick-add" data-id="provence">
+  Shiko produktin
+</button>
             </div>
             <span class="shop-badge">Bestseller</span>
           </div>
@@ -575,6 +579,43 @@
             </div>
           </div>
         </div>
+        <div class="shop-card" data-cat="aksesore" data-price="900" data-name="Costumized box holder">
+          <div class="shop-card-img">
+            <img src="images/aksesor6.webp" alt="Costumized box holder" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">shiko produktin</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">aksesore</p>
+            <p class="shop-card-name">Costumized box holder</p>
+            
+            <div class="shop-card-foot">
+              <span class="shop-card-price">900 L</span>
+              <button class="add-btn" data-name="Costumized box holder">+ Shto</button>
+            </div>
+          </div>
+        </div>
+         <div class="shop-card" data-cat="aksesore" data-price="1400" data-name="candle stylish holders">
+          <div class="shop-card-img">
+            <img src="images/AKSESORE1.webp" alt="candle stylish holders" class="prod-photo"/>
+            <div class="shop-card-overlay">
+              <button class="quick-add">shiko produktin</button>
+            </div>
+          </div>
+          <div class="shop-card-body">
+            <p class="shop-card-tag">aksesore</p>
+            <p class="shop-card-name">Costumized box holder</p>
+            
+            <div class="shop-card-foot">
+              <span class="shop-card-price">1 400 L</span>
+              <button class="add-btn" data-name="candle stylish holders">+ Shto</button>
+            </div>
+          </div>
+        </div>
+
+    
+
         </div>
         
           
@@ -642,5 +683,7 @@
   </div>
 
   <script src="shop.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/product.js"></script>
 </body>
 </html>

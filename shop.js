@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
   }
 
-  document.querySelectorAll('.add-btn, .quick-add').forEach(btn => {
+ document.querySelectorAll('.add-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const card = btn.closest('.shop-card');
@@ -207,3 +207,27 @@ document.querySelector('.page-next')?.addEventListener('click', () => {
 });
 
 }); 
+
+document.querySelectorAll(".quick-add").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const card = this.closest(".shop-card");
+
+        const id = card.dataset.id;
+
+        window.location.href = `product.html?id=${id}`;
+
+    });
+
+});
+document.querySelectorAll(".quick-add").forEach(button => {
+    button.addEventListener("click", function () {
+
+        const card = this.closest(".shop-card");
+        const id = card.dataset.id;
+
+        window.location.href = "product.html?id=" + id;
+
+    });
+});
