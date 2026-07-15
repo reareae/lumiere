@@ -1,0 +1,209 @@
+/* ===========================
+   ABOUT CANDLES
+=========================== */
+
+.page-hero{
+    background:#EDE6C8;
+    padding:140px 0 90px;
+    text-align:center;
+}
+
+.page-hero h1{
+    font-family:'Cinzel',serif;
+    font-size:54px;
+    font-weight:400;
+    color:#013220;
+    margin-bottom:18px;
+}
+
+.page-hero p{
+    font-size:14px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#7E8C54;
+}
+
+/* ========================= */
+
+.about-process{
+    padding:100px 0;
+    background:#F5EFD6;
+}
+
+.about-process .container{
+    max-width:900px;
+}
+
+.about-process h2{
+    font-family:'Cinzel',serif;
+    font-size:32px;
+    font-weight:400;
+    color:#013220;
+    margin:70px 0 25px;
+}
+
+.about-process p{
+    font-size:16px;
+    line-height:2;
+    color:#535C39;
+    margin-bottom:22px;
+}
+
+/* ========================= */
+
+.about-list{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    list-style:none;
+    padding:0;
+}
+
+.about-list li{
+    background:#fff;
+    border:1px solid #E4DDBD;
+    padding:18px 20px;
+    color:#013220;
+    font-size:15px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.about-list li:hover{
+    transform:translateY(-3px);
+    border-color:#7E8C54;
+    box-shadow:0 10px 30px rgba(1,50,32,.08);
+}
+
+/* ========================= */
+
+.about-quote{
+    margin:80px auto;
+    padding:45px;
+    text-align:center;
+    background:#EDE6C8;
+    border-left:4px solid #7E8C54;
+    font-family:'Cinzel',serif;
+    font-size:28px;
+    color:#013220;
+    line-height:1.7;
+}
+
+/* ========================= */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin:70px 0;
+}
+
+.process-card{
+    background:white;
+    padding:35px;
+    text-align:center;
+    border:1px solid #E4DDBD;
+    transition:.35s;
+}
+
+.process-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(1,50,32,.08);
+}
+
+.process-card i{
+    font-size:44px;
+    color:#7E8C54;
+    margin-bottom:20px;
+}
+
+.process-card h3{
+    font-family:'Cinzel',serif;
+    font-size:22px;
+    color:#013220;
+    margin-bottom:15px;
+}
+
+.process-card p{
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* ========================= */
+
+.about-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin:70px 0;
+}
+
+.about-gallery img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.about-gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* ========================= */
+
+.cta-box{
+    margin-top:90px;
+    background:#013220;
+    color:white;
+    padding:70px;
+    text-align:center;
+}
+
+.cta-box h2{
+    color:#F5EFD6;
+    margin-top:0;
+}
+
+.cta-box p{
+    color:#D9D4BF;
+    max-width:700px;
+    margin:25px auto;
+}
+
+.cta-box .btn{
+    margin-top:20px;
+}
+
+/* ========================= */
+
+@media(max-width:900px){
+
+.about-gallery,
+.process-grid,
+.about-list{
+    grid-template-columns:1fr;
+}
+
+.page-hero h1{
+    font-size:40px;
+}
+
+.about-process{
+    padding:70px 0;
+}
+
+.about-process h2{
+    font-size:26px;
+}
+
+.about-quote{
+    font-size:22px;
+    padding:30px;
+}
+
+.cta-box{
+    padding:45px 25px;
+}
+
+}

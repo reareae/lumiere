@@ -1,0 +1,217 @@
+/* ══════════════════════════════════════════════
+   LUMIÈRE — RESPONSIVE.CSS
+   Lidhet I FUNDIT në <head>, pas të gjitha CSS të tjera,
+   në çdo faqe: index, shop, gift, product, about, blog.
+   ══════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────
+   TABLET (≤ 1024px)
+   ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* NAV */
+  .nav-left { gap: 16px; }
+  .nav-search { width: 140px; }
+
+  /* SHOP: sidebar më ngushtë */
+  .shop-body { grid-template-columns: 220px 1fr; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* PRODUCT PAGE */
+  .product-grid { gap: 40px; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ABOUT */
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-steps { flex-wrap: wrap; justify-content: center; row-gap: 32px; }
+  .process-connector { display: none; }
+  .process-step { flex: 0 1 45%; }
+
+  /* INDEX */
+  .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  .prod-grid { grid-template-columns: repeat(2, 1fr); }
+  .val-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-grid { gap: 40px; }
+
+  /* GIFT */
+  .gift-section { grid-template-columns: repeat(2, 1fr); }
+
+  /* BLOG */
+  .blog-two-col { grid-template-columns: 1fr; gap: 24px; }
+}
+
+
+/* ─────────────────────────────────────────
+   MOBILE / TABLET SMALL (≤ 768px)
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  body { overflow-x: hidden; }
+
+  /* TOPBAR */
+  .topbar {
+    font-size: 10px;
+    padding: 6px 12px;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  .nav {
+    flex-wrap: wrap;
+    padding: 12px 20px;
+    row-gap: 10px;
+  }
+  .nav-left {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12px;
+  }
+  .logo { order: 1; font-size: 20px; }
+  .nav-right { order: 2; gap: 12px; }
+  .nav-search { display: none; }
+
+  /* HERO (index) */
+  .hero-content { padding: 0 24px; max-width: 100%; }
+  .hero-h1 { font-size: 32px; }
+  .hero-sub { font-size: 13px; }
+
+  /* about-hero */
+  .about-hero-content { padding: 0 24px; max-width: 100%; }
+  .about-hero-h { font-size: 36px; }
+
+  /* shop-hero / gift-hero */
+  .shop-hero-content, .gift-hero-content { padding: 0 24px; }
+  .shop-hero-h, .gift-hero-h { font-size: 28px; }
+
+  /* BREADCRUMB */
+  .breadcrumb { padding: 10px 20px; font-size: 10px; }
+
+  /* STRIP (index features) */
+  .strip { flex-wrap: wrap; gap: 16px; justify-content: center; padding: 20px; }
+
+  /* CATEGORY GRID */
+  .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  /* PRODUCT CARDS GRID (index, shop, gift) */
+  .prod-grid,
+  .products-grid,
+  .gift-section {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px;
+  }
+
+  /* SHOP BODY → sidebar sipër, jo anash */
+  .shop-body {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: relative;
+    top: 0;
+    border-right: none;
+    border-bottom: 0.5px solid #C8BC90;
+    padding: 20px;
+  }
+  .shop-main { padding: 20px; }
+
+  /* VIEW LIST fallback mobile — mbetet grid gjithsesi */
+  .products-grid.list-view { grid-template-columns: 1fr !important; }
+  .products-grid.list-view .shop-card {
+    display: block;
+  }
+
+  /* PRODUCT PAGE */
+  .product-grid { grid-template-columns: 1fr; gap: 28px; }
+  .product-main-img { height: 320px; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .product-name { font-size: 24px; }
+  .product-actions { flex-wrap: wrap; }
+
+  /* ABOUT SECTIONS */
+  .story-grid { grid-template-columns: 1fr; gap: 32px; }
+  .story-img-placeholder { height: 320px; }
+  .story-stats { grid-template-columns: repeat(3, 1fr); }
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .process-steps { flex-direction: column; align-items: center; }
+  .process-step { flex: 1 1 100%; max-width: 320px; }
+  .sustain-grid { grid-template-columns: 1fr; }
+  .sustain-img-wrap { min-height: 260px; }
+
+  /* HOW / MISSION / CTA (index + about) */
+  .how-grid { grid-template-columns: 1fr; gap: 28px; }
+  .val-grid { grid-template-columns: 1fr; }
+  .mission-h, .cta-h { font-size: 24px; }
+  .cta-btns { flex-direction: column; align-items: stretch; }
+
+  /* BLOG */
+  .blog-featured-card { grid-template-columns: 1fr; }
+  .blog-two-col { grid-template-columns: 1fr; }
+  .article-header-text { padding: 0 20px; }
+  .article-title { font-size: 26px; }
+  .article-body { padding: 0 20px; }
+
+  /* GIFT occasion strip → horizontal scroll */
+  .occasion-strip {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .occ-btn { flex-shrink: 0; }
+
+  /* WHY-GIFT / WHY-GRID strips */
+  .why-gift { flex-wrap: wrap; gap: 16px; justify-content: center; }
+
+  /* FOOTER */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 40px 20px;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+
+  /* SECTIONS general padding */
+  .about-section, .section, .process-section, .mission-section,
+  .sustain-text, .gift-section, .shop-main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   MOBILE SMALL (≤ 480px)
+   ───────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* single column everywhere for product cards */
+  .cat-grid,
+  .prod-grid,
+  .products-grid,
+  .gift-section,
+  .related-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-h1 { font-size: 26px; }
+  .about-hero-h { font-size: 28px; }
+  .shop-hero-h, .gift-hero-h { font-size: 22px; }
+
+  .story-stats { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+
+  .nav-left { font-size: 11px; gap: 10px; }
+  .logo { font-size: 18px; }
+
+  .product-main-img { height: 240px; }
+  .product-name { font-size: 20px; }
+  .product-price { font-size: 22px; }
+
+  .article-title { font-size: 22px; }
+  .article-subtitle { font-size: 14px; }
+}

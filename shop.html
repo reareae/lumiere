@@ -8,10 +8,13 @@
   <link rel="stylesheet" href="css/shop.css"/>
   <link rel="stylesheet" href="css/product.css"/>
   <link rel="stylesheet" href="css/cart.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
+
 <body>
+  
 
   <!-- TOPBAR -->
   <div class="topbar">
@@ -21,11 +24,11 @@
   <!-- NAV -->
 <nav class="nav">
     <div class="nav-left">
-      <a href="collections.html">Koleksionet</a>
-      <a href="gift.html">Ide Dhuratash</a>
-      <a href="about.html" class="active">Bota Jonë</a>
-      <a href="blog.html">Blog</a>
+       <a href="shop.html">shop</a>
       <a href="contact.html">Kontakt</a>
+      <a href="about.html" >Bota Jonë</a>
+      <a href="blog.html">Blog</a>
+      <a href="gift.html">Ide Dhuratash</a>
      
     </div>
     <a href="index.html" class="logo">LUMIÈRE</a>
@@ -173,446 +176,393 @@
       <div class="products-grid" id="productsGrid">
 
     
-        <div class="shop-card" data-cat="aromatike" data-id="provence" data-price="1200" data-name="Provence">
-          <div class="shop-card-img">
-            <img src="images/il_1588xN.7666017445_c4ol.avif" alt="Provence" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add" data-id="provence">
-  Shiko produktin
-</button>
-            </div>
-            <span class="shop-badge">Bestseller</span>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Aromatike · Lavandë</p>
-            <p class="shop-card-name">Provence</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 45 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 200 L</span>
-              <button class="add-btn" data-name="Provence">+ Shto</button>
-            </div>
-          </div>
-        </div>
 
-        <div class="shop-card" data-cat="dekorative" data-price="1550" data-name="Verde Pillar">
-          <div class="shop-card-img">
-            <img src="images/soy candles.webp" alt="Verde Pillar" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Dekorative · Ambient</p>
-            <p class="shop-card-name">Verde Pillar</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 550 L</span>
-              <button class="add-btn" data-name="Verde Pillar">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="aromatike" data-id="provence" data-price="1200" data-name="Provence" data-scent="lavande" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/il_1588xN.7666017445_c4ol.avif" alt="Provence" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add" data-id="provence">Shiko produktin</button></div>
+      <span class="shop-badge">Bestseller</span>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Aromatike · Lavandë</p>
+      <p class="shop-card-name">Provence</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 45 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 200 L</span>
+        <button class="add-btn" data-name="Provence">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="ekologjike" data-price="850" data-name="Lumière Classic">
-          <div class="shop-card-img">
-            <img src="images/il_1588xN.3162499558_i4yy.webp" alt="Lumière Classic" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-            <span class="shop-badge new">I ri</span>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Ekologjike · Vanilje</p>
-            <p class="shop-card-name">Lumière Classic</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">850 L</span>
-              <button class="add-btn" data-name="Lumière Classic">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="dekorative" data-id="verde-pillar" data-price="1550" data-name="Verde Pillar" data-scent="sandalwood" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/soy candles.webp" alt="Verde Pillar" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Dekorative · Ambient</p>
+      <p class="shop-card-name">Verde Pillar</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 550 L</span>
+        <button class="add-btn" data-name="Verde Pillar">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="festive" data-price="2800" data-name="Set Krishtlindjesh">
-          <div class="shop-card-img">
-            <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Set Krishtlindjesh" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Festive · Set</p>
-            <p class="shop-card-name">Set Krishtlindjesh</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-gift"></i> Kutia dhuratë</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">2 800 L</span>
-              <button class="add-btn" data-name="Set Krishtlindjesh">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="ekologjike" data-id="lumiere-classic" data-price="850" data-name="Lumière Classic" data-scent="vanilje" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/il_1588xN.3162499558_i4yy.webp" alt="Lumière Classic" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">SHIKO PRODUKTIN</button></div>
+      <span class="shop-badge new">I ri</span>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Ekologjike · Vanilje</p>
+      <p class="shop-card-name">Lumière Classic</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">850 L</span>
+        <button class="add-btn" data-name="Lumière Classic">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="romantike" data-price="1100" data-name="Rosa Serata">
-          <div class="shop-card-img">
-            <img src="images/rosaserata.jpg" alt="Rosa Serata" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Romantike · Trëndafil</p>
-            <p class="shop-card-name">Rosa Serata</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 40 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 100 L</span>
-              <button class="add-btn" data-name="Rosa Serata">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="festive" data-id="set-krishtlindjesh" data-price="2800" data-name="Set Krishtlindjesh" data-scent="pishe" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Set Krishtlindjesh" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Festive · Set</p>
+      <p class="shop-card-name">Set Krishtlindjesh</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-gift"></i> Kutia dhuratë</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">2 800 L</span>
+        <button class="add-btn" data-name="Set Krishtlindjesh">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="aromatike" data-price="1350" data-name="Amber Nuit">
-          <div class="shop-card-img">
-            <img src="images/20260110-AmberNoirCandle.webp" alt="Amber Nuit" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Premium · Amber & Oud</p>
-            <p class="shop-card-name">Amber Nuit</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 350 L</span>
-              <button class="add-btn" data-name="Amber Nuit">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="romantike" data-id="rosa-serata" data-price="1100" data-name="Rosa Serata" data-scent="trendarfil" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/rosaserata.jpg" alt="Rosa Serata" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Romantike · Trëndafil</p>
+      <p class="shop-card-name">Rosa Serata</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 40 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 100 L</span>
+        <button class="add-btn" data-name="Rosa Serata">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="aromatike" data-price="980" data-name="Citrus Garden">
-          <div class="shop-card-img">
-            <img src="images/citrus candle.png" alt="Citrus Garden" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Aromatike · Agrume</p>
-            <p class="shop-card-name">Citrus Garden</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 38 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">980 L</span>
-              <button class="add-btn" data-name="Citrus Garden">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="aromatike" data-id="amber-nuit" data-price="1350" data-name="Amber Nuit" data-scent="amber" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/20260110-AmberNoirCandle.webp" alt="Amber Nuit" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Premium · Amber & Oud</p>
+      <p class="shop-card-name">Amber Nuit</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 350 L</span>
+        <button class="add-btn" data-name="Amber Nuit">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="ekologjike" data-price="1650" data-name="Forest Pine">
-          <div class="shop-card-img">
-            <img src="images/il_600x600.7475990337_5j8y.avif" alt="Forest Pine" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Ekologjike · Pishe</p>
-            <p class="shop-card-name">Forest Pine</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 65 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 650 L</span>
-              <button class="add-btn" data-name="Forest Pine">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="aromatike" data-id="citrus-garden" data-price="980" data-name="Citrus Garden" data-scent="agrume" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/citrus candle.png" alt="Citrus Garden" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Aromatike · Agrume</p>
+      <p class="shop-card-name">Citrus Garden</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 38 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">980 L</span>
+        <button class="add-btn" data-name="Citrus Garden">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="dekorative" data-price="720" data-name="Mini Votive Set">
-          <div class="shop-card-img">
-            <img src="images/minivotive.webp" alt="Mini Votive Set" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-            <span class="shop-badge sale">–20%</span>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Dekorative · Set 3 copë</p>
-            <p class="shop-card-name">Mini Votive Set</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 20 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
-            <div class="shop-card-foot">
-              <div>
-                <span class="shop-card-price">720 L</span>
-                <span class="old-price">900 L</span>
-              </div>
-              <button class="add-btn" data-name="Mini Votive Set">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="ekologjike" data-id="forest-pine" data-price="1650" data-name="Forest Pine" data-scent="pishe" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/il_600x600.7475990337_5j8y.avif" alt="Forest Pine" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Ekologjike · Pishe</p>
+      <p class="shop-card-name">Forest Pine</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 65 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 650 L</span>
+        <button class="add-btn" data-name="Forest Pine">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="romantike" data-price="1800" data-name="Velvet Rose">
-          <div class="shop-card-img">
-            <img src="images/velvet rose.jpg" alt="Velvet Rose" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Romantike · Premium</p>
-            <p class="shop-card-name">Velvet Rose</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 800 L</span>
-              <button class="add-btn" data-name="Velvet Rose">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="dekorative" data-id="mini-votive-set" data-price="720" data-name="Mini Votive Set" data-scent="vanilje" data-hours="short">
+    <div class="shop-card-img">
+      <img src="images/minivotive.webp" alt="Mini Votive Set" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+      <span class="shop-badge sale">–20%</span>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Dekorative · Set 3 copë</p>
+      <p class="shop-card-name">Mini Votive Set</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 20 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+      <div class="shop-card-foot">
+        <div><span class="shop-card-price">720 L</span><span class="old-price">900 L</span></div>
+        <button class="add-btn" data-name="Mini Votive Set">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="festive" data-price="3200" data-name="Set Ditëlindjesh">
-          <div class="shop-card-img">
-            <img src="images/gift box2.avif" alt="Set Ditëlindjesh" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Festive · Dhuratë</p>
-            <p class="shop-card-name">Set Ditëlindjesh</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-gift"></i> Kutia dhuratë</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">3 200 L</span>
-              <button class="add-btn" data-name="Set Ditëlindjesh">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="romantike" data-id="velvet-rose" data-price="1800" data-name="Velvet Rose" data-scent="trendarfil" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/velvet rose.jpg" alt="Velvet Rose" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Romantike · Premium</p>
+      <p class="shop-card-name">Velvet Rose</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 800 L</span>
+        <button class="add-btn" data-name="Velvet Rose">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="dekorative" data-price="1100" data-name="Ivory Column">
-          <div class="shop-card-img">
-            <img src="images/ivory candles.jpg" alt="Ivory Column" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Dekorative · Kolonë</p>
-            <p class="shop-card-name">Ivory Column</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 48 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 100 L</span>
-              <button class="add-btn" data-name="Ivory Column">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="festive" data-id="set-ditelindjesh" data-price="3200" data-name="Set Ditëlindjesh" data-scent="vanilje" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/gift box2.avif" alt="Set Ditëlindjesh" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Festive · Dhuratë</p>
+      <p class="shop-card-name">Set Ditëlindjesh</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-gift"></i> Kutia dhuratë</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">3 200 L</span>
+        <button class="add-btn" data-name="Set Ditëlindjesh">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
+  <div class="shop-card" data-cat="dekorative" data-id="ivory-column" data-price="1100" data-name="Ivory Column" data-scent="" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/ivory candles.jpg" alt="Ivory Column" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Dekorative · Kolonë</p>
+      <p class="shop-card-name">Ivory Column</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 48 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 100 L</span>
+        <button class="add-btn" data-name="Ivory Column">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-         <div class="shop-card" data-cat="aromatike" data-price="1450" data-name="Lavender Wonder">
-          <div class="shop-card-img">
-            <img src="images/lavender.jpg" alt="Lavender Wonder" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">Shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Aromatike · Lavender</p>
-            <p class="shop-card-name">Lavender Wonder</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 450 L</span>
-              <button class="add-btn" data-name="Lavender Wonder">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="aromatike" data-id="lavender-wonder" data-price="1450" data-name="Lavender Wonder" data-scent="lavande" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/lavender.jpg" alt="Lavender Wonder" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">Shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Aromatike · Lavender</p>
+      <p class="shop-card-name">Lavender Wonder</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 450 L</span>
+        <button class="add-btn" data-name="Lavender Wonder">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        
-           <div class="shop-card" data-cat="aromatike" data-price="1190" data-name="Lavander mini glow">
-          <div class="shop-card-img">
-            <img src="images/lavender2.jpg" alt="Lavender mini glow" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">Shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Aromatike · Lavender</p>
-            <p class="shop-card-name">Lavender Wonder</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 45 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 190 L</span>
-              <button class="add-btn" data-name="Lavender mini glow">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="aromatike" data-id="lavender-mini-glow" data-price="1190" data-name="Lavander mini glow" data-scent="lavande" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/lavender2.jpg" alt="Lavender mini glow" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">Shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Aromatike · Lavender</p>
+      <p class="shop-card-name">Lavender Wonder</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 45 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 190 L</span>
+        <button class="add-btn" data-name="Lavender mini glow">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        
-           <div class="shop-card" data-cat="ekologjike" data-price="2500" data-name="Pure&Crafted Lavender">
-          <div class="shop-card-img">
-            <img src="images/lavender 3.avif" alt="Pure&Crafted Lavender" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">Shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Aromatike · Lavender & chamomile</p>
-            <p class="shop-card-name">Pure&Crafted Lavender</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 70 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">2 500 L</span>
-              <button class="add-btn" data-name="Pure&Crafted Lavender">+ Shto</button>
-            </div>
-          </div>
-        </div>
- <div class="shop-card" data-cat="aromatike" data-price="2980" data-name="Rose and Vanilla DREAM">
-          <div class="shop-card-img">
-            <img src="images/trendafil&vanilje.avif" alt="Rose and Vanilla DREAM" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">Shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Aromatike · Trendafil&Vanilje</p>
-            <p class="shop-card-name">Rose and Vanilla DREAM</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">2 980 L</span>
-              <button class="add-btn" data-name="Rose and Vanilla DREAM">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="ekologjike" data-id="pure-crafted-lavender" data-price="2500" data-name="Pure&Crafted Lavender" data-scent="lavande" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/lavender 3.avif" alt="Pure&Crafted Lavender" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">Shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Aromatike · Lavender & chamomile</p>
+      <p class="shop-card-name">Pure&Crafted Lavender</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 70 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">2 500 L</span>
+        <button class="add-btn" data-name="Pure&Crafted Lavender">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-         <div class="shop-card" data-cat="festive" data-price="3450" data-name="cookies and cream ">
-          <div class="shop-card-img">
-            <img src="images/set fete.webp" alt="cookies and cream " class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">Shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">festive · cookies and cream </p>
-            <p class="shop-card-name">cookies and cream </p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 74 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">3 450 L</span>
-              <button class="add-btn" data-name="cookies and cream ">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="aromatike" data-price="2980" data-id="rose-vanilla-dream" data-name="Rose and Vanilla DREAM" data-scent="trendarfil" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/trendafil&vanilje.avif" alt="Rose and Vanilla DREAM" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">Shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Aromatike · Trendafil&Vanilje</p>
+      <p class="shop-card-name">Rose and Vanilla DREAM</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 50 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">2 980 L</span>
+        <button class="add-btn" data-name="Rose and Vanilla DREAM">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
+  <div class="shop-card" data-cat="festive" data-id="cookies-and-cream" data-price="3450" data-name="cookies and cream " data-scent="vanilje" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/set fete.webp" alt="cookies and cream " class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">Shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">festive · cookies and cream </p>
+      <p class="shop-card-name">cookies and cream </p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 74 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">3 450 L</span>
+        <button class="add-btn" data-name="cookies and cream ">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="festive" data-price="4000" data-name="glow globes ">
-          <div class="shop-card-img">
-            <img src="images/set krishlindje.jpg" alt="glow globes" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">Shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">festive · Sandalwood </p>
-            <p class="shop-card-name">glow globes </p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i>56 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">4 000 L</span>
-              <button class="add-btn" data-name="glow globes ">+ Shto</button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="shop-card" data-cat="dekorative" data-price="2200" data-name="Flower bloom">
-          <div class="shop-card-img">
-            <img src="images/dekorativ.webp" alt="Flower blom" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Dekorative · Amber&oud</p>
-            <p class="shop-card-name">Flower bloom</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 48 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">2 200 L</span>
-              <button class="add-btn" data-name="Flower blooM">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="festive" data-id="glow-globes" data-price="4000" data-name="glow globes " data-scent="sandalwood" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/set krishlindje.jpg" alt="glow globes" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">Shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">festive · Sandalwood </p>
+      <p class="shop-card-name">glow globes </p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i>56 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">4 000 L</span>
+        <button class="add-btn" data-name="glow globes ">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-            <div class="shop-card" data-cat="romantike" data-price="1790" data-name="Love spell">
-          <div class="shop-card-img">
-            <img src="images/lovespell.webp" alt="love spell" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">+ Shto shpejt</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">Romantike · Premium</p>
-            <p class="shop-card-name">love spell</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i>42 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 790 L</span>
-              <button class="add-btn" data-name="love spell">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="dekorative" data-id="floer-bloom" data-price="2200" data-name="Flower bloom" data-scent="amber" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/dekorativ.webp" alt="Flower blom" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Dekorative · Amber&oud</p>
+      <p class="shop-card-name">Flower bloom</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 48 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">2 200 L</span>
+        <button class="add-btn" data-name="Flower blooM">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-            <div class="shop-card" data-cat="ekologjike" data-price="2700" data-name="Prosperity Candle">
-          <div class="shop-card-img">
-            <img src="images/ekologjike.webp" alt="Prosperity Candle class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">ekologjike · agrume</p>
-            <p class="shop-card-name">Prosperity Candle</p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">2 700 L</span>
-              <button class="add-btn" data-name="Prosperity Candle">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="romantike" data-id="love-spell" data-price="1790" data-name="Love spell" data-scent="sandalwood" data-hours="mid">
+    <div class="shop-card-img">
+      <img src="images/lovespell.webp" alt="love spell" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">Romantike · Premium</p>
+      <p class="shop-card-name">love spell</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i>42 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë natyral</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 790 L</span>
+        <button class="add-btn" data-name="love spell">+ Shto</button>
+      </div>
+    </div>
+  </div>
 
-        <div class="shop-card" data-cat="festive" data-price="3000" data-name="halloween pumpkin ">
-          <div class="shop-card-img">
-            <img src="images/halloween.webp" alt="halloween pumpkin " class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">festive · portokall premium</p>
-            <p class="shop-card-name">halloween pumpkin </p>
-            <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
-            <div class="shop-card-foot">
-              <span class="shop-card-price">3 000 L</span>
-              <button class="add-btn" data-name="halloween pumpkin ">+ Shto</button>
-            </div>
-          </div>
-        </div>
-        <div class="shop-card" data-cat="aksesore" data-price="900" data-name="Costumized box holder">
-          <div class="shop-card-img">
-            <img src="images/aksesor6.webp" alt="Costumized box holder" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">aksesore</p>
-            <p class="shop-card-name">Costumized box holder</p>
-            
-            <div class="shop-card-foot">
-              <span class="shop-card-price">900 L</span>
-              <button class="add-btn" data-name="Costumized box holder">+ Shto</button>
-            </div>
-          </div>
-        </div>
-         <div class="shop-card" data-cat="aksesore" data-price="1400" data-name="candle stylish holders">
-          <div class="shop-card-img">
-            <img src="images/AKSESORE1.webp" alt="candle stylish holders" class="prod-photo"/>
-            <div class="shop-card-overlay">
-              <button class="quick-add">shiko produktin</button>
-            </div>
-          </div>
-          <div class="shop-card-body">
-            <p class="shop-card-tag">aksesore</p>
-            <p class="shop-card-name">Costumized box holder</p>
-            
-            <div class="shop-card-foot">
-              <span class="shop-card-price">1 400 L</span>
-              <button class="add-btn" data-name="candle stylish holders">+ Shto</button>
-            </div>
-          </div>
-        </div>
+  <div class="shop-card" data-cat="ekologjike" data-id="properity-candle" data-price="2700" data-name="Prosperity Candle" data-scent="agrume" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/ekologjike.webp" alt="Prosperity Candle" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">ekologjike · agrume</p>
+      <p class="shop-card-name">Prosperity Candle</p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 55 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">2 700 L</span>
+        <button class="add-btn" data-name="Prosperity Candle">+ Shto</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-card" data-cat="festive" data-id="halloween-pumpkin" data-price="3000" data-name="halloween pumpkin " data-scent="agrume" data-hours="long">
+    <div class="shop-card-img">
+      <img src="images/halloween.webp" alt="halloween pumpkin " class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">festive · portokall premium</p>
+      <p class="shop-card-name">halloween pumpkin </p>
+      <p class="shop-card-detail"><i class="ti ti-clock"></i> 60 orë &nbsp;·&nbsp; <i class="ti ti-leaf"></i> Dyllë soje</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">3 000 L</span>
+        <button class="add-btn" data-name="halloween pumpkin ">+ Shto</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-card" data-cat="aksesore" data-id="costumized-box-holder" data-price="900" data-name="Costumized box holder" data-scent="" data-hours="">
+    <div class="shop-card-img">
+      <img src="images/aksesor6.webp" alt="Costumized box holder" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">aksesore</p>
+      <p class="shop-card-name">Costumized box holder</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">900 L</span>
+        <button class="add-btn" data-name="Costumized box holder">+ Shto</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-card" data-cat="aksesore" data-id="candle-stylish-holders" data-price="1400" data-name="candle stylish holders" data-scent="" data-hours="">
+    <div class="shop-card-img">
+      <img src="images/AKSESORE1.webp" alt="candle stylish holders" class="prod-photo"/>
+      <div class="shop-card-overlay"><button class="quick-add">shiko produktin</button></div>
+    </div>
+    <div class="shop-card-body">
+      <p class="shop-card-tag">aksesore</p>
+      <p class="shop-card-name">Costumized box holder</p>
+      <div class="shop-card-foot">
+        <span class="shop-card-price">1 400 L</span>
+        <button class="add-btn" data-name="candle stylish holders">+ Shto</button>
+      </div>
+    </div>
+  </div>
+
+</div>
 
     
 
@@ -638,8 +588,7 @@
     </main>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+<footer class="footer">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">LUMIÈRE</div>
@@ -652,38 +601,45 @@
       </div>
       <div>
         <p class="fcol-title">Koleksionet</p>
-        <a href="shop.html" class="flink">Të gjitha produktet</a>
-        <a href="shop.html" class="flink">Qirinj Aromatikë</a>
-        <a href="shop.html" class="flink">Qirinj Dekorativë</a>
-        <a href="shop.html" class="flink">Ekologjikë</a>
+        <a href="#" class="flink">Qirinj Aromatikë</a>
+        <a href="#" class="flink">Qirinj Dekorativë</a>
+        <a href="#" class="flink">Ekologjikë</a>
+        <a href="#" class="flink">Festive & Romantikë</a>
+        <a href="#" class="flink">Aksesorë</a>
       </div>
       <div>
         <p class="fcol-title">Kompania</p>
-        <a href="index.html" class="flink">Rreth nesh</a>
-        <a href="index.html" class="flink">Blog</a>
-        <a href="contact.html" class="flink">Kontakt</a>
+        <a href="about.html" class="flink">Rreth nesh</a>
+        <a href="#" class="flink">Blog</a>
+        <a href="#" class="flink">Dyqanet tona</a>
+       <a href="contact.html" class="flink">Kontakt</a>
+        <a href="#" class="flink">Karriera</a>
       </div>
       <div>
         <p class="fcol-title">Ndihma</p>
-        <a href="#" class="flink">Kthimet</a>
-        <a href="#" class="flink">Dërgesa</a>
+        <a href="#" class="flink">Kthimet & Zëvendësimet</a>
+        <a href="#" class="flink">Informacion dërgese</a>
         <a href="#" class="flink">FAQ</a>
-        <a href="#" class="flink">Privatësia</a>
+        <a href="#" class="flink">Politika e Privatësisë</a>
+        <a href="#" class="flink">Kushtet e Shërbimit</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
-      <p class="fcopy">Dizajnuar me ♥ në Tiranë</p>
+     
     </div>
   </footer>
+
 
   <div class="cart-toast" id="cartToast">
     <i class="ti ti-check"></i>
     <span id="toastMsg">Produkti u shtua në shportë!</span>
   </div>
 
-  <script src="shop.js"></script>
-<script src="js/cart.js"></script>
-<script src="js/product.js"></script>
+<script src="products-data.js"></script>
+<script src="cart.js"></script>
+<script src="shop.js"></script>
+ 
+
 </body>
 </html>

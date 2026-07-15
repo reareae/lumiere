@@ -6,158 +6,218 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  /* ── CART ── */
-  let cartCount = 0;
-  const badge = document.getElementById('cart-badge');
-  const toast = document.getElementById('cartToast');
-  const toastMsg = document.getElementById('toastMsg');
-  let toastTimer;
-
-  function showToast(name) {
-    toastMsg.textContent = `"${name}" u shtua në shportë!`;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
-  }
-
- document.querySelectorAll('.add-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const card = btn.closest('.shop-card');
-      const name = card?.dataset.name || btn.dataset.name || 'Produkti';
-      cartCount++;
-      badge.textContent = cartCount;
-      badge.style.display = 'flex';
-      showToast(name);
-
-      const addBtn = card?.querySelector('.add-btn');
-      if (addBtn) {
-        addBtn.textContent = '✓ Shtuar';
-        addBtn.style.cssText = 'background:#013220;color:#F5EFD6;border-color:#013220;';
-        setTimeout(() => {
-          addBtn.textContent = '+ Shto';
-          addBtn.style.cssText = '';
-        }, 1400);
-      }
+  /* ── DROPDOWN ACCORDION ── */
+  document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      const list = document.getElementById(targetId);
+      const isOpen = !list.classList.contains('closed');
+      list.classList.toggle('closed', isOpen);
+      btn.classList.toggle('closed', isOpen);
     });
   });
 
-  /* ── FILTER BY CATEGORY ── */
+  /* ── FILTERS ── */
   const allCards = document.querySelectorAll('.shop-card');
-  const countNum = document.getElementById('countNum');
+  const countNum  = document.getElementById('countNum');
   const noResults = document.getElementById('noResults');
   const activeTags = document.getElementById('activeTags');
 
-  let activeFilters = { cat: 'all', priceMax: 5000, aromas: [], burn: [] };
+  let activeFilters = {
+    category: "all",
+    priceMin: 0,
+    priceMax: 5000,
+    scents: [],
+    hours: []
+  };
 
+  /* ── NUMRAT E KATEGORIVE ── */
+  function updateCategoryCounts() {
+    document.querySelectorAll('input[name="cat"]').forEach(radio => {
+      const val = radio.value;
+      const countEl = radio.closest('.filter-item')?.querySelector('.filter-count');
+      if (!countEl) return;
+      countEl.textContent = val === 'all'
+        ? allCards.length
+        : [...allCards].filter(c => c.dataset.cat === val).length;
+    });
+  }
+  updateCategoryCounts();
+
+  /* ── LEXO KATEGORINË NGA URL ── */
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlCategory = urlParams.get('category');
+  if (urlCategory) {
+    activeFilters.category = urlCategory;
+    const matchingRadio = document.querySelector(`input[name="cat"][value="${urlCategory}"]`);
+    if (matchingRadio) {
+      matchingRadio.checked = true;
+      document.querySelectorAll(".filter-item").forEach(item => item.classList.remove("active-filter"));
+      matchingRadio.closest(".filter-item").classList.add("active-filter");
+    }
+  }
+
+  /* Kategoritë */
+  document.querySelectorAll('input[name="cat"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+      activeFilters.category = radio.value;
+      document.querySelectorAll(".filter-item").forEach(item => item.classList.remove("active-filter"));
+      radio.closest(".filter-item").classList.add("active-filter");
+      applyFilters();
+    });
+  });
+
+  /* ── APLIKO FILTRAT ── */
   function applyFilters() {
     let visible = 0;
+
     allCards.forEach(card => {
-      const cat = card.dataset.cat;
-      const price = parseInt(card.dataset.price);
-      const catMatch = activeFilters.cat === 'all' || cat === activeFilters.cat;
-      const priceMatch = price <= activeFilters.priceMax;
-      if (catMatch && priceMatch) {
-        card.classList.remove('hidden');
-        visible++;
-      } else {
-        card.classList.add('hidden');
-      }
+      const price = parseInt(card.dataset.price || 0);
+      const category = card.dataset.cat;
+      const scent = card.dataset.scent || "";
+      const hours = card.dataset.hours || "";
+
+      const priceOk = price >= activeFilters.priceMin && price <= activeFilters.priceMax;
+      const categoryOk = activeFilters.category === "all" || category === activeFilters.category;
+      const scentOk = activeFilters.scents.length === 0 || activeFilters.scents.includes(scent);
+      const hoursOk = activeFilters.hours.length === 0 || activeFilters.hours.includes(hours);
+
+      const show = priceOk && categoryOk && scentOk && hoursOk;
+      card.classList.toggle("hidden", !show);
+      if (show) visible++;
     });
+
     countNum.textContent = visible;
-    noResults.style.display = visible === 0 ? 'block' : 'none';
+    noResults.style.display = visible === 0 ? "block" : "none";
+
+    updateTags();
+    showPage(1);
   }
 
-  /* Category radio */
-  document.querySelectorAll('.filter-item').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelectorAll('.filter-item').forEach(i => i.classList.remove('active-filter'));
-      item.classList.add('active-filter');
-      const radio = item.querySelector('input[type="radio"]');
-      activeFilters.cat = radio.value;
-      applyFilters();
-      updateTags();
-    });
-  });
-
-  /* Price slider */
+  /* ── PRICE (Min + Max) ── */
   const priceSlider = document.getElementById('priceSlider');
-  const priceMax = document.getElementById('priceMax');
+  const priceMinEl  = document.getElementById('priceMin');
+  const priceMaxEl  = document.getElementById('priceMax');
+
   priceSlider?.addEventListener('input', () => {
-    priceMax.value = priceSlider.value;
+    priceMaxEl.value = priceSlider.value;
     activeFilters.priceMax = parseInt(priceSlider.value);
     applyFilters();
-    updateTags();
   });
-  priceMax?.addEventListener('input', () => {
-    priceSlider.value = priceMax.value;
-    activeFilters.priceMax = parseInt(priceMax.value);
+  priceMaxEl?.addEventListener('input', () => {
+    const val = parseInt(priceMaxEl.value) || 5000;
+    priceSlider.value = val;
+    activeFilters.priceMax = val;
     applyFilters();
-    updateTags();
+  });
+  priceMinEl?.addEventListener('input', () => {
+    activeFilters.priceMin = parseInt(priceMinEl.value) || 0;
+    applyFilters();
   });
 
-  /* Active tags */
+  /* ── AROMA (checkbox-a) ── */
+  const scentChecks = document.querySelectorAll('.sidebar-block:nth-of-type(3) .filter-check input[type="checkbox"]');
+  scentChecks.forEach(cb => {
+    cb.addEventListener('change', () => {
+      activeFilters.scents = [...scentChecks].filter(c => c.checked).map(c => c.value);
+      applyFilters();
+    });
+  });
+
+  /* ── KOHA E DJEGIES (checkbox-a) ── */
+  const hoursChecks = document.querySelectorAll('.sidebar-block:nth-of-type(4) .filter-check input[type="checkbox"]');
+  hoursChecks.forEach(cb => {
+    cb.addEventListener('change', () => {
+      activeFilters.hours = [...hoursChecks].filter(c => c.checked).map(c => c.value);
+      applyFilters();
+    });
+  });
+
+  /* ── ACTIVE TAGS ── */
   function updateTags() {
     activeTags.innerHTML = '';
-    if (activeFilters.cat !== 'all') {
-      const pill = document.createElement('span');
-      pill.className = 'tag-pill';
-      pill.innerHTML = `${activeFilters.cat} <i class="ti ti-x"></i>`;
-      pill.addEventListener('click', () => {
-        activeFilters.cat = 'all';
-        document.querySelectorAll('.filter-item').forEach(i => i.classList.remove('active-filter'));
-        document.querySelector('.filter-item:first-child').classList.add('active-filter');
-        applyFilters(); updateTags();
-      });
-      activeTags.appendChild(pill);
-    }
-    if (activeFilters.priceMax < 5000) {
-      const pill = document.createElement('span');
-      pill.className = 'tag-pill';
-      pill.innerHTML = `Maks: ${activeFilters.priceMax} L <i class="ti ti-x"></i>`;
-      pill.addEventListener('click', () => {
+
+    if (activeFilters.priceMax < 5000 || activeFilters.priceMin > 0) {
+      const pill = makePill(`Çmimi: ${activeFilters.priceMin}–${activeFilters.priceMax} L`, () => {
+        activeFilters.priceMin = 0;
         activeFilters.priceMax = 5000;
-        priceSlider.value = 5000;
-        priceMax.value = 5000;
-        applyFilters(); updateTags();
+        if (priceMinEl) priceMinEl.value = 0;
+        if (priceMaxEl) priceMaxEl.value = 5000;
+        if (priceSlider) priceSlider.value = 5000;
+        applyFilters();
       });
       activeTags.appendChild(pill);
     }
+
+    activeFilters.scents.forEach(scent => {
+      const label = document.querySelector(`.filter-check input[value="${scent}"]`)?.parentElement.textContent.trim();
+      const pill = makePill(label || scent, () => {
+        activeFilters.scents = activeFilters.scents.filter(s => s !== scent);
+        const cb = document.querySelector(`.filter-check input[value="${scent}"]`);
+        if (cb) cb.checked = false;
+        applyFilters();
+      });
+      activeTags.appendChild(pill);
+    });
+
+    activeFilters.hours.forEach(h => {
+      const label = document.querySelector(`.filter-check input[value="${h}"]`)?.parentElement.textContent.trim();
+      const pill = makePill(label || h, () => {
+        activeFilters.hours = activeFilters.hours.filter(x => x !== h);
+        const cb = document.querySelector(`.filter-check input[value="${h}"]`);
+        if (cb) cb.checked = false;
+        applyFilters();
+      });
+      activeTags.appendChild(pill);
+    });
   }
 
-  /* Clear filters */
+  function makePill(label, onRemove) {
+    const pill = document.createElement('span');
+    pill.className = 'tag-pill';
+    pill.innerHTML = `${label} <i class="ti ti-x"></i>`;
+    pill.addEventListener('click', onRemove);
+    return pill;
+  }
+
+  /* ── CLEAR ALL ── */
   document.getElementById('clearFilters')?.addEventListener('click', () => {
-    activeFilters = { cat: 'all', priceMax: 5000 };
-    document.querySelectorAll('.filter-item').forEach(i => i.classList.remove('active-filter'));
-    document.querySelector('.filter-item:first-child').classList.add('active-filter');
+    activeFilters = { category: "all", priceMin: 0, priceMax: 5000, scents: [], hours: [] };
+
+    document.querySelectorAll('input[name="cat"]').forEach(r => r.checked = (r.value === "all"));
+    document.querySelectorAll(".filter-item").forEach(item => item.classList.remove("active-filter"));
+    document.querySelector('input[name="cat"][value="all"]')?.closest('.filter-item')?.classList.add('active-filter');
+
+    if (priceMinEl) priceMinEl.value = 0;
+    if (priceMaxEl) priceMaxEl.value = 5000;
     if (priceSlider) priceSlider.value = 5000;
-    if (priceMax) priceMax.value = 5000;
-    document.querySelectorAll('.filter-check input').forEach(cb => cb.checked = false);
+
+    scentChecks.forEach(cb => cb.checked = false);
+    hoursChecks.forEach(cb => cb.checked = false);
+
     applyFilters();
-    updateTags();
   });
 
   /* ── SORT ── */
   document.getElementById('sortSelect')?.addEventListener('change', (e) => {
-    const grid = document.getElementById('productsGrid');
+    const grid  = document.getElementById('productsGrid');
     const cards = [...grid.querySelectorAll('.shop-card')];
     cards.sort((a, b) => {
-      const aPrice = parseInt(a.dataset.price);
-      const bPrice = parseInt(b.dataset.price);
-      const aName  = a.dataset.name;
-      const bName  = b.dataset.name;
+      const ap = parseInt(a.dataset.price), bp = parseInt(b.dataset.price);
+      const an = a.dataset.name, bn = b.dataset.name;
       switch (e.target.value) {
-        case 'price-asc':  return aPrice - bPrice;
-        case 'price-desc': return bPrice - aPrice;
-        case 'name-asc':   return aName.localeCompare(bName);
-        case 'name-desc':  return bName.localeCompare(aName);
+        case 'price-asc':  return ap - bp;
+        case 'price-desc': return bp - ap;
+        case 'name-asc':   return an.localeCompare(bn);
+        case 'name-desc':  return bn.localeCompare(an);
         default: return 0;
       }
     });
     cards.forEach(c => grid.appendChild(c));
+    showPage(1);
   });
 
-  /* ── VIEW TOGGLE (grid / list) ── */
+  /* ── VIEW TOGGLE ── */
   const grid = document.getElementById('productsGrid');
   document.getElementById('gridView')?.addEventListener('click', () => {
     grid.classList.remove('list-view');
@@ -170,64 +230,60 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('gridView').classList.remove('active');
   });
 
-/* ── PAGINATION ── */
-const productsPerPage = 12;
-const cards = [...document.querySelectorAll('.shop-card')];
-const pageButtons = document.querySelectorAll('.page-btn:not(.page-next)');
-let currentPage = 1;
+  /* ── PAGINATION ── */
+  const PER_PAGE = 12;
+  let currentPage = 1;
 
-function showPage(page) {
-  currentPage = page;
-
-  cards.forEach((card, index) => {
-    const start = (page - 1) * productsPerPage;
-    const end = start + productsPerPage;
-
-    card.classList.toggle('hidden', !(index >= start && index < end));
-  });
-
-  pageButtons.forEach(btn => btn.classList.remove('active'));
-  pageButtons[page - 1]?.classList.add('active');
-}
-
-showPage(1);
-
-pageButtons.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    showPage(index + 1);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-});
-
-document.querySelector('.page-next')?.addEventListener('click', () => {
-  if (currentPage < pageButtons.length) {
-    showPage(currentPage + 1);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  function getVisibleCards() {
+    return [...document.querySelectorAll('.shop-card:not(.hidden)')];
   }
-});
 
-}); 
+  function showPage(page) {
+    const cards = getVisibleCards();
+    const total = cards.length;
+    const totalPages = Math.ceil(total / PER_PAGE);
+    currentPage = Math.min(Math.max(page, 1), totalPages || 1);
 
-document.querySelectorAll(".quick-add").forEach(button => {
-
-    button.addEventListener("click", function () {
-
-        const card = this.closest(".shop-card");
-
-        const id = card.dataset.id;
-
-        window.location.href = `product.html?id=${id}`;
-
+    cards.forEach((card, i) => {
+      const start = (currentPage - 1) * PER_PAGE;
+      const end   = start + PER_PAGE;
+      card.style.display = (i >= start && i < end) ? '' : 'none';
     });
 
-});
-document.querySelectorAll(".quick-add").forEach(button => {
-    button.addEventListener("click", function () {
+    const pagination = document.getElementById('pagination');
+    if (!pagination) return;
+    pagination.innerHTML = '';
 
-        const card = this.closest(".shop-card");
-        const id = card.dataset.id;
+    if (currentPage > 1) {
+      const prev = document.createElement('button');
+      prev.className = 'page-btn page-next';
+      prev.innerHTML = '<i class="ti ti-chevron-left"></i>';
+      prev.addEventListener('click', () => { showPage(currentPage - 1); window.scrollTo({top:0,behavior:'smooth'}); });
+      pagination.appendChild(prev);
+    }
 
-        window.location.href = "product.html?id=" + id;
+    for (let p = 1; p <= totalPages; p++) {
+      const btn = document.createElement('button');
+      btn.className = 'page-btn' + (p === currentPage ? ' active' : '');
+      btn.textContent = p;
+      btn.addEventListener('click', () => { showPage(p); window.scrollTo({top:0,behavior:'smooth'}); });
+      pagination.appendChild(btn);
+    }
 
-    });
+    if (currentPage < totalPages) {
+      const next = document.createElement('button');
+      next.className = 'page-btn page-next';
+      next.innerHTML = '<i class="ti ti-chevron-right"></i>';
+      next.addEventListener('click', () => { showPage(currentPage + 1); window.scrollTo({top:0,behavior:'smooth'}); });
+      pagination.appendChild(next);
+    }
+  }
+
+  /* ── FILLIMI ── */
+  if (urlCategory) {
+    applyFilters();
+  } else {
+    showPage(1);
+  }
+
 });

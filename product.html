@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Produkt — Lumière</title>
   <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/product.css"/>
+<link rel="stylesheet" href="css/product.css"/>
+<link rel="stylesheet" href="css/cart.css"/>
+<link rel="stylesheet" href="css/responsive.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
@@ -17,11 +19,15 @@
 
   <nav class="nav">
     <div class="nav-left">
-      <a href="collections.html">Koleksionet</a>
-      <a href="gift.html">Ide Dhuratash</a>
-      <a href="about.html">Bota Jonë</a>
-      <a href="blog.html">Blog</a>
+      
+   
+    
+      <a href="shop.html">shop</a>
       <a href="contact.html">Kontakt</a>
+      <a href="about.html" >Bota Jonë</a>
+      <a href="blog.html">Blog</a>
+      <a href="gift.html">Ide Dhuratash</a>
+      
     </div>
     <a href="index.html" class="logo">LUMIÈRE</a>
     <div class="nav-right">
@@ -39,7 +45,7 @@
   <div class="breadcrumb" id="breadcrumb">
     <a href="index.html">Kryefaqja</a>
     <i class="ti ti-chevron-right"></i>
-    <a href="shop.html">Shop</a>
+   <a href="shop.html" id="breadcrumb-parent">Shop</a>
     <i class="ti ti-chevron-right"></i>
     <span id="breadcrumb-name">...</span>
   </div>
@@ -128,14 +134,14 @@
     </div>
 
     <!-- RELATED PRODUCTS -->
-    <div class="related-section">
+    <div class="related-wrap">
       <p class="eyebrow">Mund t'ju pëlqejë gjithashtu</p>
-      <h2 class="related-title">Produkte të ngjashme</h2>
+      <h2 class="related-h">Produkte të ngjashme</h2>
       <div class="related-grid" id="relatedGrid"></div>
     </div>
   </section>
 
-  <footer class="footer">
+   <footer class="footer">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">LUMIÈRE</div>
@@ -147,55 +153,43 @@
         </div>
       </div>
       <div>
-        <p class="fcol-title">Shop</p>
-        <a href="shop.html" class="flink">Shop All</a>
-        <a href="collections.html" class="flink">Koleksionet</a>
-        <a href="gift.html" class="flink">Ide Dhuratash</a>
+        <p class="fcol-title">Koleksionet</p>
+        <a href="#" class="flink">Qirinj Aromatikë</a>
+        <a href="#" class="flink">Qirinj Dekorativë</a>
+        <a href="#" class="flink">Ekologjikë</a>
+        <a href="#" class="flink">Festive & Romantikë</a>
+        <a href="#" class="flink">Aksesorë</a>
       </div>
       <div>
         <p class="fcol-title">Kompania</p>
-        <a href="about.html" class="flink">Bota Jonë</a>
-        <a href="blog.html" class="flink">Blog</a>
-        <a href="contact.html" class="flink">Kontakt</a>
+        <a href="about.html" class="flink">Rreth nesh</a>
+        <a href="#" class="flink">Blog</a>
+        <a href="#" class="flink">Dyqanet tona</a>
+       <a href="contact.html" class="flink">Kontakt</a>
+        <a href="#" class="flink">Karriera</a>
       </div>
       <div>
         <p class="fcol-title">Ndihma</p>
-        <a href="#" class="flink">Kthimet</a>
-        <a href="#" class="flink">Dërgesa</a>
+        <a href="#" class="flink">Kthimet & Zëvendësimet</a>
+        <a href="#" class="flink">Informacion dërgese</a>
         <a href="#" class="flink">FAQ</a>
-        <a href="#" class="flink">Privatësia</a>
+        <a href="#" class="flink">Politika e Privatësisë</a>
+        <a href="#" class="flink">Kushtet e Shërbimit</a>
       </div>
     </div>
     <div class="footer-bottom">
       <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
-      <p class="fcopy">Dizajnuar me ♥ në Tiranë</p>
+     
     </div>
   </footer>
 
-  <!-- CART SIDEBAR -->
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <div class="cart-sidebar" id="cartSidebar">
-    <div class="cart-header">
-      <h3>Shporta juaj</h3>
-      <button class="cart-close" id="cartClose"><i class="ti ti-x"></i></button>
-    </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-footer">
-      <div class="cart-total-row">
-        <span>Total</span>
-        <span class="cart-total-price" id="cartTotal">0 L</span>
-      </div>
-      <a href="#" class="cart-checkout-btn">Vazhdo me blerjen</a>
-      <a href="shop.html" class="cart-continue-btn">Vazhdo blerjet</a>
-    </div>
-  </div>
 
-  <div class="cart-toast" id="cartToast">
-    <i class="ti ti-check"></i>
-    <span id="toastMsg"></span>
-  </div>
+  
 
-  <script src="js/cart.js"></script>
-  <script src="js/product.js"></script>
+  
+  
+  <script src="products-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="product.js"></script>
 </body>
 </html>

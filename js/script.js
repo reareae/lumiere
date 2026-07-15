@@ -8,32 +8,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ══ CART BADGE (Ruan numrin edhe kur ndryshon faqe) ══ */
-  // Merr numrin e ruajtur nga memoria e shfletuesit, nëse nuk ka asgjë fillon nga 0
-  let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
-  
-  const cartWrap = document.querySelector('.nav-icons .ti-shopping-bag')?.parentElement;
+  /* ══ KRIJO cart-wrap / cart-badge (index.html s'i ka ende në HTML) ══ */
+  const icon = document.querySelector('.ti-shopping-bag');
+if (icon && !icon.closest('.cart-wrap')) {
+  const wrap = document.createElement('span');
+  wrap.className = 'cart-wrap';
   const badge = document.createElement('span');
   badge.id = 'cart-badge';
-  
-  if (cartWrap) {
-    const wrap = document.createElement('span');
-    wrap.className = 'cart-wrap';
-    const icon = document.querySelector('.ti-shopping-bag');
-    if (icon) {
-      icon.parentElement.replaceChild(wrap, icon);
-      wrap.appendChild(icon);
-      wrap.appendChild(badge);
-    }
-    
-    // Shfaq numrin e saktë sapo ngarkohet faqja e re
-    if (cartCount > 0) {
-      badge.textContent = cartCount;
-      badge.style.display = 'flex';
-    } else {
-      badge.style.display = 'none';
-    }
-  }
+
+  icon.parentElement.replaceChild(wrap, icon);
+  wrap.appendChild(icon);
+  wrap.appendChild(badge);
+
+  wrap.addEventListener('click', () => Cart.open());
+}
+
+  /* ══ KLIKIMI MBI KARTËN → SHKO TE PRODUKTI ══ */
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.add-btn')) return;
+      const id = card.dataset.id;
+      if (id) window.location.href = 'product.html?id=' + id;
+    });
+  });
 
   /* ══ ADD TO CART ══ */
   const toast = document.getElementById('cartToast');
@@ -44,14 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const card = btn.closest('.card');
-      const name = card?.dataset.name || 'Produkti';
+      if (!card) return;
 
-      cartCount++;
-      // Ruan numrin e ri në memorien e shfletuesit
-      localStorage.setItem('cartCount', cartCount);
-      
-      badge.textContent = cartCount;
-      badge.style.display = 'flex';
+      Cart.add(
+        card.dataset.id,
+        card.dataset.name,
+        Number(card.dataset.price),
+        card.dataset.tag,
+        card.dataset.image
+      );
+
+      const name = card.dataset.name || 'Produkti';
 
       btn.textContent = '✓ Shtuar';
       btn.style.cssText = 'background:#013220;color:#F5EFD6;border-color:#013220;';

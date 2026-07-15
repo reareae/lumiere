@@ -6,6 +6,7 @@
   <title>Blog — Lumière</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/blog.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
 </head>
@@ -17,11 +18,12 @@
 
   <nav class="nav">
     <div class="nav-left">
-      <a href="collections.html">Koleksionet</a>
-      <a href="gift.html">Ide Dhuratash</a>
-      <a href="about.html">Bota Jonë</a>
-      <a href="blog.html" class="active">Blog</a>
+
+     <a href="shop.html">shop</a>
       <a href="contact.html">Kontakt</a>
+      <a href="about.html" >Bota Jonë</a>
+      <a href="blog.html">Blog</a>
+      <a href="gift.html">Ide Dhuratash</a>
     </div>
     <a href="index.html" class="logo">LUMIÈRE</a>
     <div class="nav-right">
@@ -39,7 +41,7 @@
   <!-- HERO -->
   <section class="blog-hero">
     <div class="blog-hero-img">
-      <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Blog Lumière"/>
+      <img src="images/blogu.avif" alt="Blog Lumière"/>
       <div class="blog-hero-overlay"></div>
     </div>
     <div class="blog-hero-content">
@@ -61,7 +63,7 @@
     <!-- ARTICLE 1 — FEATURED (dimëror) -->
     <article class="blog-featured-card" data-id="dimri" onclick="openArticle('dimri')">
       <div class="bfc-img">
-        <img src="images/set krishlindje.jpg" alt="Koleksioni Dimëror"/>
+        <img src="images/dimer.jpg" alt="Koleksioni Dimëror"/>
         <span class="bfc-badge">I ri · Koleksion</span>
       </div>
       <div class="bfc-text">
@@ -79,7 +81,7 @@
 
       <article class="blog-small-card" data-id="vera" onclick="openArticle('vera')">
         <div class="bsc-img">
-          <img src="images/citrus candle.png" alt="Koleksioni Veror"/>
+          <img src="images/vere.jpg" alt="Koleksioni Veror"/>
           <span class="bfc-badge">Koleksion · Verë</span>
         </div>
         <div class="bsc-text">
@@ -92,7 +94,7 @@
 
       <article class="blog-small-card" data-id="kujdes" onclick="openArticle('kujdes')">
         <div class="bsc-img">
-          <img src="images/soy candles.webp" alt="Kujdesi për qirinjtë"/>
+          <img src="images/kujdesi.jpg" alt="Kujdesi për qirinjtë"/>
           <span class="bfc-badge">Këshilla</span>
         </div>
         <div class="bsc-text">
@@ -106,16 +108,16 @@
     </div>
   </section>
 
-  <!-- ARTICLE PAGES (hidden) -->
+  
   <div class="article-page" id="article-dimri" style="display:none">
     <div class="article-header">
-      <img src="images/set krishlindje.jpg" alt="Koleksioni Dimëror" class="article-hero-img"/>
+      <img src="images/il_1588xN.7217353809_97up.jpg" alt="Koleksioni Dimëror" class="article-hero-img"/>
       <div class="article-header-overlay"></div>
       <div class="article-header-text">
         <span class="bfc-badge">I ri · Koleksion</span>
         <h1 class="article-title">Koleksioni i Ri Dimëror Lumière</h1>
         <p class="article-subtitle">Aroma që ngrohin netët e gjata</p>
-        <p class="article-meta"><i class="ti ti-calendar"></i> 08 Korrik 2026 &nbsp;·&nbsp; <i class="ti ti-user"></i> Elena Duka &nbsp;·&nbsp; <i class="ti ti-clock"></i> 4 min lexim</p>
+        <p class="article-meta"><i class="ti ti-calendar"></i> 08 Korrik 2026 &nbsp;·&nbsp; <i class="ti ti-user"></i> Elena Duka &nbsp;·&nbsp; <i class="ti ti-clock"></i> 2 min lexim</p>
       </div>
     </div>
     <div class="article-body">
@@ -129,7 +131,7 @@
         <p>Sara, specialistja jonë e aromave, kaloi tre muaj duke testuar kombinime të pishe alpine me amber, kanellë me sandalwood, dhe dëllinjë me musk të bardhë. Rezultati — katër aroma unike që e bëjnë çdo dhomë të ndihet si vendpushim dimëror.</p>
 
         <div class="article-img-full">
-          <img src="images/il_1588xN.7394624854_oa4i.webp" alt="Produktet e koleksionit"/>
+          <img src="images/koleksiondimri1.jpg" alt="Produktet e koleksionit"/>
           <p class="article-img-caption">Produktet e Koleksionit Dimëror 2026 — Set Krishtlindjesh, Glow Globes dhe Forest Pine</p>
         </div>
 
@@ -148,7 +150,7 @@
 
         <div class="article-cta-box">
           <p>Koleksioni Dimëror është i disponueshëm tani — sasi të kufizuara.</p>
-          <a href="shop.html" class="btn btn-dark">Shiko koleksionin</a>
+          <a href="winter.collection.html" class="btn btn-dark">Shiko koleksionin</a>
         </div>
       </div>
     </div>
@@ -174,7 +176,7 @@
         <p>Ndërkohë që dimri kërkon ngrohtësi dhe thellësi, vera kërkon dritë dhe freski. Aromat verore duhet të jenë të lehta, energjizuese dhe të mos mbulojnë ajrin — por ta freskojnë atë.</p>
 
         <div class="article-img-full">
-          <img src="images/lavender.jpg" alt="Aromat verore"/>
+          <img src="images/il_600x600.8066222264_50ki.webp" alt="Aromat verore"/>
         </div>
 
         <h2>5 aromat tona të preferuara</h2>
@@ -194,7 +196,7 @@
 
   <div class="article-page" id="article-kujdes" style="display:none">
     <div class="article-header">
-      <img src="images/soy candles.webp" alt="Kujdesi" class="article-hero-img"/>
+      <img src="images/il_1588xN.2547221719_dapk.webp" alt="Kujdesi" class="article-hero-img"/>
       <div class="article-header-overlay"></div>
       <div class="article-header-text">
         <span class="bfc-badge">Këshilla</span>
@@ -215,7 +217,7 @@
         <p>Çdo herë para ndezjes, pritini fitilin në 5-6mm. Fitili i gjatë krijon flakë të madhe, tym dhe djegie të pabarabartë. Mund të blini "wick trimmer" ose t'i preni me gërshërë të zakonshme.</p>
 
         <div class="article-img-full">
-          <img src="images/il_1588xN.3162499558_i4yy.webp" alt="Kujdesi për qirinjtë"/>
+          <img src="images/gift2.webp" alt="Kujdesi për qirinjtë"/>
         </div>
 
         <h2>Rregulla 3 — Mos e djegni më shumë se 4 orë</h2>
@@ -243,8 +245,7 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="main-footer">
+ <footer class="footer">
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">LUMIÈRE</div>
@@ -256,30 +257,36 @@
         </div>
       </div>
       <div>
-        <p class="fcol-title">Shop</p>
-        <a href="shop.html" class="flink">Shop All</a>
-        <a href="collections.html" class="flink">Koleksionet</a>
-        <a href="gift.html" class="flink">Ide Dhuratash</a>
+        <p class="fcol-title">Koleksionet</p>
+        <a href="#" class="flink">Qirinj Aromatikë</a>
+        <a href="#" class="flink">Qirinj Dekorativë</a>
+        <a href="#" class="flink">Ekologjikë</a>
+        <a href="#" class="flink">Festive & Romantikë</a>
+        <a href="#" class="flink">Aksesorë</a>
       </div>
       <div>
         <p class="fcol-title">Kompania</p>
-        <a href="about.html" class="flink">Bota Jonë</a>
-        <a href="blog.html" class="flink" style="color:#013220;font-weight:500">Blog</a>
-        <a href="contact.html" class="flink">Kontakt</a>
+        <a href="about.html" class="flink">Rreth nesh</a>
+        <a href="#" class="flink">Blog</a>
+        <a href="#" class="flink">Dyqanet tona</a>
+       <a href="contact.html" class="flink">Kontakt</a>
+        <a href="#" class="flink">Karriera</a>
       </div>
       <div>
         <p class="fcol-title">Ndihma</p>
-        <a href="#" class="flink">Kthimet</a>
-        <a href="#" class="flink">Dërgesa</a>
+        <a href="#" class="flink">Kthimet & Zëvendësimet</a>
+        <a href="#" class="flink">Informacion dërgese</a>
         <a href="#" class="flink">FAQ</a>
-        <a href="#" class="flink">Privatësia</a>
+        <a href="#" class="flink">Politika e Privatësisë</a>
+        <a href="#" class="flink">Kushtet e Shërbimit</a>
       </div>
     </div>
-    <div class="footer-bottom">
+    <footer class="footer" id="main-footer">
       <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
-      
+     
     </div>
   </footer>
+
 
   <script src="blog.js"></script>
 </body>

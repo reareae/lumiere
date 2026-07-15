@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+if (window.location.hash) {
+  const target = document.querySelector(window.location.hash);
+  if (target) {
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+}
 
   /* ── NAV SCROLL ── */
   const nav = document.querySelector('.nav');
@@ -32,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  /* ── SMOOTH ANCHOR SCROLL ── */
+  
   document.querySelectorAll('a[href^="about.html#"], a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');

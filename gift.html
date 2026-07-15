@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ide Dhuratash — Lumière</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/cart.css"/>
+  <link rel="stylesheet" href="css/gift.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="topbar">
+    Dërgim falas për porosi mbi 3 000 L &nbsp;·&nbsp; 100% Dyllë Natyral &nbsp;·&nbsp; I punuar me dorë
+  </div>
+
+  <nav class="nav">
+    <div class="nav-left">
+      
+       <a href="shop.html">shop</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="about.html" >Bota Jonë</a>
+      <a href="blog.html">Blog</a>
+      <a href="gift.html">Ide Dhuratash</a>
+    </div>
+    <a href="index.html" class="logo">LUMIÈRE</a>
+    <div class="nav-right">
+      <input class="nav-search" placeholder="Kërko..."/>
+      <div class="nav-icons">
+        <i class="ti ti-user"></i>
+        <span class="cart-wrap" style="position:relative;cursor:pointer;">
+          <i class="ti ti-shopping-bag"></i>
+          <span id="cart-badge" style="position:absolute;top:-8px;right:-9px;background:#357A39;color:#fff;font-size:9px;width:17px;height:17px;border-radius:50%;display:none;align-items:center;justify-content:center;font-family:'Inter',sans-serif;"></span>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="gift-hero">
+    <div class="gift-hero-overlay"></div>
+    <div class="gift-hero-content">
+      <p class="eyebrow" style="color:rgba(245,239,214,0.55)">Lumière Gifts</p>
+      <h1 class="gift-hero-h">Dhurata perfekte<br>për çdo <em>moment</em></h1>
+      <p class="gift-hero-sub">Qirinj artizanalë të paketuar me kujdes — dhurata që krijon momente të paharrueshme.</p>
+    </div>
+  </section>
+
+  <div class="breadcrumb">
+    <a href="index.html">Kryefaqja</a>
+    <i class="ti ti-chevron-right"></i>
+    <span>Ide Dhuratash</span>
+  </div>
+
+  <!-- OCCASIONS STRIP -->
+  <div class="occasion-strip">
+    <button class="occ-btn active" data-occ="all">Të gjitha</button>
+    <button class="occ-btn" data-occ="ditelindje">Ditëlindje</button>
+    <button class="occ-btn" data-occ="dasme">Dasma</button>
+    <button class="occ-btn" data-occ="krishtlindje"> Krishtlindje</button>
+    <button class="occ-btn" data-occ="relaksim"> Relaksim</button>
+    <button class="occ-btn" data-occ="dashuri"> Dashuri</button>
+  </div>
+
+  <!-- WHY GIFT -->
+  <section class="why-gift">
+    <div class="wg-item">
+      <i class="ti ti-gift"></i>
+      <p>Pako dhurate falas</p>
+    </div>
+    <div class="wg-item">
+      <i class="ti ti-writing"></i>
+      <p>Kartë personale me dorë</p>
+    </div>
+    <div class="wg-item">
+      <i class="ti ti-truck-delivery"></i>
+      <p>Dërgim të nesërmen</p>
+    </div>
+    <div class="wg-item">
+      <i class="ti ti-heart"></i>
+      <p>100% artizanal</p>
+    </div>
+  </section>
+
+  <!-- GIFT PRODUCTS -->
+  <section class="gift-section">
+
+    <!-- CARD 1 -->
+    <div class="gift-card" data-occ="ditelindje" data-id="sete-ditelindjesh" data-price="3200" data-name="Set Ditëlindjesh">
+      <div class="gift-card-img" onclick="goProduct('sete-ditelindjesh')">
+        <img src="images/set personalizuar.webp" alt="Sete Ditëlindjesh"/>
+        <div class="gift-img-overlay">
+           <span>Shiko produktin</span>
+        </div>
+        <span class="gift-badge"> Ditëlindje</span>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('sete-ditelindjesh')">Set Ditëlindjesh</p>
+        <p class="gift-card-desc">Qiri artizanal + kutia dhuratë elegante + kartë personale. Dhurata ideale për ditëlindje.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">3 200 L</span>
+          <button class="gift-add-btn" onclick="addGift('set-ditelindjesh','Set Ditëlindjesh',3200,'Festive · Dhuratë','images/set_personalizuar.webp')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="gift-card" data-occ="ditelindje " data-id="birthday-candle-gift-box" data-price="2500" data-name="Birthday Candle Gift Box">
+      <div class="gift-card-img" onclick="goProduct('birthday-candle-gift-box')">
+        <img src="images/gift6.webp" alt="Birthday  Candle Gift Box"/>
+        <div class="gift-img-overlay">
+          <span>Shiko produktin</span>
+        </div>
+        <span class="gift-badge"> Bestseller</span>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('birthday-candle-gift-box')">Birthday Candle Gift Box</p>
+        <p class="gift-card-desc">Set komplet me qiri aromatik, pako rozë elegante dhe kartë urimesh. Surprizë e plotë.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">2 500 L</span>
+          <button class="gift-add-btn" onclick="addGift('birthday-candle-gift-box','Birthday Candle Gift Box',2500,'Dhuratë · Ditëlindje','images/gift6.webp')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="gift-card" data-occ=" ditelindje" data-id="candle-wick-trimmer-set" data-price="1800" data-name="Candle & Wick Trimmer Set">
+      <div class="gift-card-img" onclick="goProduct('candle-wick-trimmer-set')">
+        <img src="images/giftset.webp" alt="Candle Gift Set"/>
+        <div class="gift-img-overlay">
+         <span>Shiko produktin</span>
+        </div>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('candle-wick-trimmer-set')">Candle & Wick Trimmer Set</p>
+        <p class="gift-card-desc">Qiri artizanal + wick trimmer ari + shkrepëse dekorative. Seti i plotë për dashamirësit e qirinjve.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">1 800 L</span>
+          <button class="gift-add-btn" onclick="addGift('candle-wick-trimmer-set','Candle & Wick Trimmer Set',1800,'Dhuratë · Premium','images/gift_set.webp')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="gift-card" data-occ="dasme " data-id="wedding-favor-set" data-price="4500" data-name="Wedding Favor Set">
+      <div class="gift-card-img" onclick="goProduct('wedding-favor-set')">
+        <img src="images/setvotiv.webp" alt="Wedding Favors"/>
+        <div class="gift-img-overlay">
+          <span>Shiko produktin</span>
+        </div>
+        <span class="gift-badge"> Dasma</span>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('wedding-favor-set')">Wedding Favor Set</p>
+        <p class="gift-card-desc">Set 9 qirinjsh votiv në mbajtëse druri me lule të thara — favoret ideale për dasma dhe evente.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">4 500 L</span>
+          <button class="gift-add-btn" onclick="addGift('wedding-favor-set','Wedding Favor Set',4500,'Dhuratë · Dasma','images/il_1588xN_5634131884_tsfn.webp')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="gift-card" data-occ="krishtlindje" data-id="seti-krishtlindjesh" data-price="2800" data-name="Set Krishtlindjesh">
+      <div class="gift-card-img" onclick="goProduct('seti-krishtlindjesh')">
+        <img src="images/krishtlidje.webp" alt="Set Krishtlindjesh"/>
+        <div class="gift-img-overlay">
+          <span>Shiko produktin</span>
+        </div>
+        <span class="gift-badge"> Dimër</span>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('seti-krishtlindjesh')">Set Krishtlindjesh</p>
+        <p class="gift-card-desc">2 qirinj artizanalë me aromë pishe dhe kanellë + kutia festive. Atmosfera e dimrit në dhuratë.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">2 800 L</span>
+          <button class="gift-add-btn" onclick="addGift('seti-krishtlindjesh','Set Krishtlindjesh',2800,'Festive · Set','images/il_1588xN.7394624854_oa4i.webp')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="gift-card" data-occ="dashuri relaksim" data-id="rosae-serata" data-price="1100" data-name="Rosa Serata">
+      <div class="gift-card-img" onclick="goProduct('rosae-serata')">
+        <img src="images/romantike.avif" alt="Rosae Serata"/>
+        <div class="gift-img-overlay">
+          <span>Shiko produktin</span>
+        </div>
+        <span class="gift-badge"> Romantike</span>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('rosae-serata')">Rosa Serata</p>
+        <p class="gift-card-desc">Trëndafil dhe musk — qiri perfekt si dhuratë romantike. Pakohet me letër mëndafshi dhe lule.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">1 100 L</span>
+          <button class="gift-add-btn" onclick="addGift('rosae-serata','Rosa Serata',1100,'Romantike · Trëndafil','images/rosaserata.jpg')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="gift-card" data-occ="relaksim" data-id="velveti-rose" data-price="1800" data-name="Velvet Rose">
+      <div class="gift-card-img" onclick="goProduct('velveti-rose')">
+        <img src="images/trendafil.avif" alt="Velvet Rose"/>
+        <div class="gift-img-overlay">
+          <span>Shiko produktin</span>
+        </div>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('velveti-rose')">Velvet Rose</p>
+        <p class="gift-card-desc">Qiri premium me trëndafil të kuq dhe velvet musk. Dhurata elegante për ata me shije të rafinuar.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">1 800 L</span>
+          <button class="gift-add-btn" onclick="addGift('velveti-rose','Velvet Rose',1800,'Romantike · Premium','images/velvet rose.jpg')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="gift-card" data-occ=" krishtlindje" data-id="glowy-globes" data-price="4000" data-name="Glowy Globes">
+      <div class="gift-card-img" onclick="goProduct('glowy-globes')">
+        <img src="images/globes.jpg" alt="Glowy Globes"/>
+        <div class="gift-img-overlay">
+          <span>Shiko produktin</span>
+        </div>
+        <span class="gift-badge"> Premium</span>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('glowy-globes')">Glowy Globes</p>
+        <p class="gift-card-desc">Sfera qirinjsh premium sandalwood — prezantimi vizual më i bukur. Dhurata WOW për festat e fundvitit.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">4 000 L</span>
+          <button class="gift-add-btn" onclick="addGift('glowy-globes','Glowy Globes',4000,'Festive · Sandalwood','images/set krishlindje.jpg')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="gift-card" data-occ="dasme " data-id="mini-tealight-set" data-price="1400" data-name="Mini Tealight Wedding Set">
+      <div class="gift-card-img" onclick="goProduct('mini-tealight-set')">
+        <img src="images/set dasme.webp" alt="Mini Tealight Set"/>
+        <div class="gift-img-overlay">
+          <span>Shiko produktin</span>
+       </div>
+        <span class="gift-badge"> unike</span>
+      </div>
+      <div class="gift-card-body">
+        <p class="gift-card-name" onclick="goProduct('mini-tealight-set')">Mini Tealight Set</p>
+        <p class="gift-card-desc">Set qirinjsh mini natyralë — të bukur, aromatikë dhe perfektë si favor eventi ose dhuratë e vogël.</p>
+        <div class="gift-card-foot">
+          <span class="gift-card-price">1 400 L</span>
+          <button class="gift-add-btn" onclick="addGift('mini-tealight-set','Mini Tealight Set',1400,'Dhuratë · Mini Set','images/il_75x75_5496356111_4tpb.webp')">
+            <i class="ti ti-shopping-bag"></i> Shto
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CUSTOM GIFT CTA -->
+  <section class="gift-custom">
+    <div class="gift-custom-inner">
+      <i class="ti ti-sparkles"></i>
+      <h2>Doni diçka të personalizuar?</h2>
+      <p>Krijojmë set dhuratash sipas dëshirës suaj — aromën, ngjyrën, madhësinë dhe kartën personale. Na kontaktoni dhe e bëjmë së bashku.</p>
+      <a href="contact.html" class="btn btn-light">Na kontaktoni</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LUMIÈRE</div>
+        <p class="footer-tag">"Ndriço çdo moment,<br>frymëzo çdo ndjesi."</p>
+        <div class="footer-socials">
+          <a href="#"><i class="ti ti-brand-instagram"></i></a>
+          <a href="#"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#"><i class="ti ti-brand-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="fcol-title">Koleksionet</p>
+        <a href="#" class="flink">Qirinj Aromatikë</a>
+        <a href="#" class="flink">Qirinj Dekorativë</a>
+        <a href="#" class="flink">Ekologjikë</a>
+        <a href="#" class="flink">Festive & Romantikë</a>
+        <a href="#" class="flink">Aksesorë</a>
+      </div>
+      <div>
+        <p class="fcol-title">Kompania</p>
+        <a href="about.html" class="flink">Rreth nesh</a>
+        <a href="#" class="flink">Blog</a>
+        <a href="#" class="flink">Dyqanet tona</a>
+       <a href="contact.html" class="flink">Kontakt</a>
+        <a href="#" class="flink">Karriera</a>
+      </div>
+      <div>
+        <p class="fcol-title">Ndihma</p>
+        <a href="#" class="flink">Kthimet & Zëvendësimet</a>
+        <a href="#" class="flink">Informacion dërgese</a>
+        <a href="#" class="flink">FAQ</a>
+        <a href="#" class="flink">Politika e Privatësisë</a>
+        <a href="#" class="flink">Kushtet e Shërbimit</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="fcopy">© 2026 Lumière Albania. Të drejtat e rezervuara.</p>
+     
+    </div>
+  </footer>
+
+  
+<script src="products-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="gift.js"></script>
+</body>
+</html>
